@@ -1,0 +1,320 @@
+/*******************************************************************************************
+  SIMPL+ Module Information
+  (Fill in comments below)
+*******************************************************************************************/
+/*
+Dealer Name:
+System Name:
+System Number:
+Programmer: MK
+Comments:
+*/
+
+/*******************************************************************************************
+  Compiler Directives
+  (Uncomment and declare compiler directives as needed)
+*******************************************************************************************/
+// #ENABLE_DYNAMIC
+#SYMBOL_NAME "Symetrix Volume Processor v3.0"
+// #HINT ""
+#DEFINE_CONSTANT cbDebug 0
+#CATEGORY "34" // Mixer
+// #PRINT_TO_TRACE
+// #DIGITAL_EXPAND 
+// #ANALOG_SERIAL_EXPAND 
+// #OUTPUT_SHIFT 
+// #HELP_PDF_FILE ""
+#DEFAULT_VOLATILE
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+// #ENCODING_ASCII
+// #ENCODING_UTF16
+// #ENCODING_INHERIT_FROM_PARENT
+// #ENCODING_INHERIT_FROM_PROGRAM
+
+#HELP_BEGIN
+Only for use inside Symetrix Volume module
+#HELP_END
+
+
+/*******************************************************************************************
+  Include Libraries
+  (Uncomment and include additional libraries as needed)
+*******************************************************************************************/
+// #CRESTRON_LIBRARY ""
+// #USER_LIBRARY ""
+
+/*******************************************************************************************
+  DIGITAL, ANALOG and SERIAL INPUTS and OUTPUTS
+  (Uncomment and declare inputs and outputs as needed)
+*******************************************************************************************/
+DIGITAL_INPUT _SKIP_, _SKIP_, _SKIP_, _SKIP_, _SKIP_;
+DIGITAL_INPUT Vol_Up, Vol_Down;
+ANALOG_INPUT Slider_In, Direct_In;
+//STRING_INPUT Control_ID[5];
+STRING_INPUT From_Command_Processor[100];
+// BUFFER_INPUT 
+
+DIGITAL_OUTPUT _SKIP_, _SKIP_, _SKIP_, _SKIP_, _SKIP_;
+DIGITAL_OUTPUT Out_Of_Range, User_Range_Fault;
+ANALOG_OUTPUT Bar_Out;
+STRING_OUTPUT Level_db, To_Command_Processor;
+
+/*******************************************************************************************
+  Parameters
+  (Uncomment and declare parameters as needed)
+*******************************************************************************************/
+INTEGER_PARAMETER Hardware_Range;
+SIGNED_INTEGER_PARAMETER User_Min, User_Max;
+INTEGER_PARAMETER Increment_dB;
+// LONG_INTEGER_PARAMETER
+// SIGNED_LONG_INTEGER_PARAMETER
+STRING_PARAMETER Control_ID[5];
+
+/*******************************************************************************************
+  Parameter Properties
+  (Uncomment and declare parameter properties as needed)
+*******************************************************************************************/
+/*
+#BEGIN_PARAMETER_PROPERTIES parameter_variable, parameter_variable, ...
+   // propValidUnits = // unitString or unitDecimal|unitHex|unitPercent|unitCharacter|unitTime|unitTicks;
+   // propDefaultUnit = // unitString, unitDecimal, unitHex, unitPercent, unitCharacter, unitTime or unitTicks;
+   // propBounds = lower_bound , upper_bound;
+   // propDefaultValue = ;  // or, propDefaultValue = "";
+   // propList = // { "value" , "label" } , { "value" , "label" } , ... ;
+   // propShortDescription = "status_bar_hint_text";
+   // #BEGIN_PROP_FULL_DESCRIPTION  line_1...  line_2...  line_n  #END_PROP_FULL_DESCRIPTION
+   // #BEGIN_PROP_NOTES line_1...  line_2...  line_n  #END_PROP_NOTES
+#END_PARAMETER_PROPERTIES
+*/
+
+/*******************************************************************************************
+  Global Variables
+  (Uncomment and declare global variables as needed)
+  Note:  Be sure to initialize all declared STRING variables as needed
+         For example, in Function Main: myString = "";
+*******************************************************************************************/
+INTEGER	iControlValue, iResponseValue, iHardwareSpandB, iUserSpandB, iUserSpan, iIncrement;
+SIGNED_INTEGER iUserMindB, iUserMaxdB;
+INTEGER iUserMin, iUserMax;
+INTEGER idBWhole, idBDec, iSliderConvert, iUpdateReceived, iDirectConvert, iBarBase;
+SIGNED_INTEGER Hardware_Min, Hardware_Max;
+STRING iTemp[100];
+LONG_INTEGER idBCalcLong;
+
+Integer_Function fGetRounded(Integer V1, Integer V2, Integer V3)
+{
+    LONG_INTEGER LongTemp;
+    INTEGER IntTemp;
+    
+    IntTemp = muldiv(V1, V2, V3);
+    LongTemp = V1 * V2;
+    if (LongTemp UMOD V3 >= V3/2)
+    {
+    	IntTemp = IntTemp + 1;
+    }
+    Return (IntTemp);
+}
+
+/*******************************************************************************************
+  Event Handlers
+  (Uncomment and declare additional event handlers as needed)
+*******************************************************************************************/
+PUSH Vol_Up
+{
+ 	while (Vol_Up && iResponseValue < iUserMax)
+ 	{
+ 		if (iUpdateReceived)
+ 		{
+ 			iUpdateReceived = 0;
+ 			if (iResponseValue < iUserMin)
+ 			{
+ 				makestring(To_Command_Processor, "CS %s %u\r", Control_ID, iUserMin);
+ 			}
+ 			else if (iResponseValue < (iUserMax - iIncrement))
+ 			{
+ 				makestring(To_Command_Processor, "CS %s %u\r", Control_ID, (iResponseValue + iIncrement));
+ 			}
+ 			else
+ 			{
+ 				makestring(To_Command_Processor, "CS %s %u\r", Control_ID, iUserMax);
+ 			}
+ 			delay(25);
+ 		}
+ 	}
+}
+
+PUSH Vol_Down
+{
+ 	while (Vol_Down && iResponseValue > iUserMin)
+ 	{
+ 		if (iUpdateReceived)
+ 		{
+ 			iUpdateReceived = 0;
+ 			if (iResponseValue > iUserMax)
+ 			{
+ 				makestring(To_Command_Processor, "CS %s %u\r", Control_ID, iUserMax);
+ 			}
+ 			else if ((iResponseValue - iIncrement) > iUserMin)
+ 			{
+ 				makestring(To_Command_Processor, "CS %s %u\r", Control_ID, (iResponseValue - iIncrement));
+ 			}
+ 			else
+ 			{
+ 				makestring(To_Command_Processor, "CS %s %u\r", Control_ID, iUserMin);
+ 			}
+ 			delay(25);
+ 		}
+ 	}
+}
+
+CHANGE Slider_In
+{
+ 	iSliderConvert = muldiv(Slider_In, iUserSpan, 65535) + iUserMin;
+ 	makestring(To_Command_Processor, "CS %s %u\r", Control_ID, iSliderConvert);
+}
+
+CHANGE Direct_In
+{
+	Signed_Integer Direct_In_Signed;
+
+	Direct_In_Signed = Direct_In;
+ 	if (Direct_In_Signed >= iUserMindB && Direct_In_Signed <= iUserMaxdB)
+ 	{
+ 		iDirectConvert = fGetRounded((Direct_In - Hardware_Min), 65535, iHardwareSpandB);
+ 		makestring(To_Command_Processor, "CS %s %u\r", Control_ID, iDirectConvert);
+ 	}
+}
+
+CHANGE From_Command_Processor
+{
+    Long_Integer liBarCalc;
+    if (find("Send Info\r", From_Command_Processor))
+    {
+    	makestring(To_Command_Processor, "%u Send Info 0 %s\r", atoi(From_Command_Processor), Control_ID);
+    }
+    else if (atoi(Control_ID) = atoi(From_Command_Processor))
+    {
+    	iTemp = remove("=", From_Command_Processor);
+    	iResponseValue = atoi(From_Command_Processor);
+    	if (iResponseValue < iUserMin || iResponseValue > iUserMax)
+    	{
+    		Out_Of_Range = 1;
+    		if (iResponseValue < iUserMin)
+    		{
+    			Bar_Out = 0;
+    		}
+    		else
+    		{
+    			Bar_Out = 65535;
+    		}
+	   	}
+	   	else
+	   	{
+	   		Out_Of_Range = 0;
+	   		liBarCalc = (iResponseValue - iUserMin) * 65535;
+	   		Bar_Out = liBarCalc/iUserSpan;
+	   	}
+	   	if (iResponseValue = 0)
+	   	{
+	   		Level_db = "Off";
+	   	}
+	   	else
+	   	{
+	   		idBWhole = fGetRounded(iResponseValue, iHardwareSpandB, 65535) + Hardware_Min;
+	   		makestring(Level_db, "%d dB", idBWhole);
+	   	}
+	   	iUpdateReceived = 1;
+    }
+}
+
+/*******************************************************************************************
+  Main()
+  Uncomment and place one-time startup code here
+  (This code will get called when the system starts up)
+*******************************************************************************************/
+Function Main()
+{
+    WaitForInitializationComplete();
+    iUpdateReceived = 0;
+    switch (Hardware_Range)
+    {
+    	case(1)://Standard
+    	{
+    		Hardware_Min = -72;
+    		Hardware_Max = 12;
+    	}
+    	case(2)://Analog Input
+    	{
+    		Hardware_Min = -24;
+    		Hardware_Max = 24;
+    	}
+    	case(3)://Dial/Ring Tones
+    	{
+    		Hardware_Min = -40;
+    		Hardware_Max = 20;
+    	}
+    	case(4)://AGC Level
+    	{
+    		Hardware_Min = -40;
+    		Hardware_Max = 0;
+    	}
+    	case(5)://DTMF Tones
+    	{
+    		Hardware_Min = -20;
+    		Hardware_Max = 0;
+    	}
+    	case(6)://Noise Cancel
+    	{
+    		Hardware_Min = 0;
+    		Hardware_Max = 20;
+    	}
+    }
+    
+    iHardwareSpandB = Hardware_Max - Hardware_Min;
+    
+	if (User_Min >= Hardware_Min && User_Min <= Hardware_Max)
+    {
+    	iUserMindB = User_Min;
+    }
+    else
+    {
+    	iUserMindB = Hardware_Min;
+    	User_Range_Fault = 1;
+    }
+
+    if (User_Max >= Hardware_Min && User_Max <= Hardware_Max)
+    {
+    	iUserMaxdB = User_Max;
+    }
+    else
+    {
+    	iUserMaxdB = Hardware_Max;
+    	User_Range_Fault = 1;
+    }
+    if (cbDebug)
+    	Trace("%s iHardwareSpandB=%u, iUserMindB=%d, iUserMaxdB=%d\n", GetSymbolInstanceName(), iHardwareSpandB, iUserMindB, iUserMaxdB);
+
+    if (iUserMaxdB > iUserMindB)
+    {
+    	iUserSpandB = iUserMaxdB - iUserMindB;
+    }
+    else
+    {
+    	iUserMaxdB = Hardware_Max;
+    	iUserMindB = Hardware_Min;
+    	iUserSpandB = iHardwareSpandB;
+    	User_Range_Fault = 1;
+    	Trace("%s User Max is Less Than or Equal To User Min - Using Hardware Limits\n", GetSymbolInstanceName());
+    }
+    
+    iUserSpan = fGetRounded(iUserSpandB, 65535, iHardwareSpandB);
+    
+    iIncrement = fGetRounded(Increment_dB, 65535, iHardwareSpandB);
+    
+    iUserMin = fGetRounded((iUserMindB - Hardware_Min), 65535, iHardwareSpandB);
+    
+    iUserMax = fGetRounded((iUserMaxdB - Hardware_Min), 65535, iHardwareSpandB);
+    if (cbDebug)
+    	Trace("%s iUserSpandB=%u, iUserMin=%u, iUserMax=%u, iUserSpan=%u, iIncrement=%u\n", GetSymbolInstanceName(), iUserSpandB, iUserMin, iUserMax, iUserSpan, iIncrement);
+}

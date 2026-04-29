@@ -1,0 +1,682 @@
+/*******************************************************************************************
+  SIMPL+ Module Information
+  (Fill in comments below)
+*******************************************************************************************/
+/*
+Dealer Name:
+System Name:
+System Number:
+Programmer:MK
+Comments:
+*/
+
+/*******************************************************************************************
+  Compiler Directives
+  (Uncomment and declare compiler directives as needed)
+*******************************************************************************************/
+// #ENABLE_DYNAMIC
+#SYMBOL_NAME "Symetrix Command Processor SIMPL+ IP v3.0"
+// #HINT ""
+#DEFINE_CONSTANT ciMaxInstances 200
+#DEFINE_CONSTANT ciMaxCharacters 100
+#DEFINE_CONSTANT ciBufferSize 5000
+#DEFINE_CONSTANT ciControlTypeID 0
+#DEFINE_CONSTANT ciControlTypePhone 1
+#DEFINE_CONSTANT ciControlTypePhonebook 2
+#DEFINE_CONSTANT ciInfoTimeoutWait 25
+#DEFINE_CONSTANT ciTimeoutWait 200
+#DEFINE_CONSTANT ciQueueSize 500
+#DEFINE_CONSTANT ciPhoneGet 0
+#DEFINE_CONSTANT ciPhoneSet 1
+#DEFINE_CONSTANT csSendInfo "Send Info\r"
+#DEFINE_CONSTANT cbDebug 0
+#CATEGORY "34" // Mixer
+// #PRINT_TO_TRACE
+// #DIGITAL_EXPAND 
+// #ANALOG_SERIAL_EXPAND 
+// #OUTPUT_SHIFT 
+// #HELP_PDF_FILE ""
+#DEFAULT_VOLATILE
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+// #ENCODING_ASCII
+// #ENCODING_UTF16
+// #ENCODING_INHERIT_FROM_PARENT
+// #ENCODING_INHERIT_FROM_PROGRAM
+
+#HELP_BEGIN
+For use only inside Symetrix Command Processor IP module
+#HELP_END
+
+
+/*******************************************************************************************
+  Include Libraries
+  (Uncomment and include additional libraries as needed)
+*******************************************************************************************/
+// #CRESTRON_LIBRARY ""
+// #USER_LIBRARY ""
+
+/*******************************************************************************************
+  DIGITAL, ANALOG and SERIAL INPUTS and OUTPUTS
+  (Uncomment and declare inputs and outputs as needed)
+*******************************************************************************************/
+DIGITAL_INPUT Initialize, Get_Next_Info, Send_Next, Stop_Init_After_10_No_Replies;
+DIGITAL_INPUT Client_Connect_FB;
+ANALOG_INPUT Client_Connect_Status_FB;
+// STRING_INPUT 
+BUFFER_INPUT From_Device[ciBufferSize], _SKIP_, From_Modules[ciBufferSize];
+
+DIGITAL_OUTPUT Initialize_Busy, Info_Timed_Out, Timed_Out;
+DIGITAL_OUTPUT Client_Connect;
+// ANALOG_OUTPUT 
+STRING_OUTPUT To_Device, _SKIP_, To_Modules[ciMaxInstances];
+
+/*******************************************************************************************
+  SOCKETS
+  (Uncomment and define socket definitions as needed)
+*******************************************************************************************/
+// TCP_CLIENT
+// TCP_SERVER
+// UDP_SOCKET
+
+/*******************************************************************************************
+  Parameters
+  (Uncomment and declare parameters as needed)
+*******************************************************************************************/
+// INTEGER_PARAMETER
+// SIGNED_INTEGER_PARAMETER
+// LONG_INTEGER_PARAMETER
+// SIGNED_LONG_INTEGER_PARAMETER
+// STRING_PARAMETER
+
+/*******************************************************************************************
+  Parameter Properties
+  (Uncomment and declare parameter properties as needed)
+*******************************************************************************************/
+/*
+#BEGIN_PARAMETER_PROPERTIES parameter_variable, parameter_variable, ...
+   // propValidUnits = // unitString or unitDecimal|unitHex|unitPercent|unitCharacter|unitTime|unitTicks;
+   // propDefaultUnit = // unitString, unitDecimal, unitHex, unitPercent, unitCharacter, unitTime or unitTicks;
+   // propBounds = lower_bound , upper_bound;
+   // propDefaultValue = ;  // or, propDefaultValue = "";
+   // propList = // { "value" , "label" } , { "value" , "label" } , ... ;
+   // propShortDescription = "status_bar_hint_text";
+   // #BEGIN_PROP_FULL_DESCRIPTION  line_1...  line_2...  line_n  #END_PROP_FULL_DESCRIPTION
+   // #BEGIN_PROP_NOTES line_1...  line_2...  line_n  #END_PROP_NOTES
+#END_PARAMETER_PROPERTIES
+*/
+
+/*******************************************************************************************
+  Structure Definitions
+  (Uncomment and define structure definitions as needed)
+  Note:  Be sure to initialize all declared STRING variables as needed
+         For example, in Function Main: struct.myString = "";
+*******************************************************************************************/
+/*
+STRUCTURE MyStruct1
+{
+};
+
+MyStruct1 struct;
+*/
+
+/*******************************************************************************************
+  Global Variables
+  (Uncomment and declare global variables as needed)
+  Note:  Be sure to initialize all declared STRING variables as needed
+         For example, in Function Main: myString = "";
+*******************************************************************************************/
+INTEGER	iNextCommandStore, iNextCommandSend;
+INTEGER	iTempInstance, iTempControlID, iTempControlID1, iTempControlID2;
+INTEGER bFlag1, bFlag2, bOkToSend;
+INTEGER	iTemp, iSendInfo, iTempValue, a, iLastModuleConnected, iResendCount;
+INTEGER iControlID1[ciMaxInstances], iControlID2[ciMaxInstances], iControlType[ciMaxInstances];
+INTEGER iPhoneUnit[ciMaxInstances], iPhoneCard[ciMaxInstances], iPhoneLine[ciMaxInstances];
+INTEGER iTempUnit, iTempResource, iTempEnum, iTempCard, iTempChannel, iPhoneParseType;
+STRING	sCommand[ciQueueSize][ciMaxCharacters],	sTempModules[ciMaxCharacters], sTempDevice[ciMaxCharacters],
+		sTrash[ciMaxCharacters], sTemp[ciMaxCharacters], sLastSent[ciMaxCharacters], sPhoneData[ciMaxCharacters];
+INTEGER iInfoNoAnswerCount;
+INTEGER bIsHeartBeating, bIsCommunicating, bPhoneControlInUse, bInitializationIsComplete;
+INTEGER iDeviceMessageTimeoutCount;
+/*******************************************************************************************
+  Functions
+  (Add any additional functions here)
+  Note:  Functions must be physically placed before the location in
+         the code that calls them.
+*******************************************************************************************/
+Function fTimeOut()
+{
+	wait(ciTimeoutWait, wTimeOut)
+	{
+		Timed_Out = 1;
+		iDeviceMessageTimeoutCount = iDeviceMessageTimeoutCount + 1;
+		trace("Symnet command timed out - timeout count=%u\n", iDeviceMessageTimeoutCount);
+		if (iDeviceMessageTimeoutCount > 2)
+		{
+			bIsCommunicating = 0;
+			trace("Symnet timeout limit reached - Symnet device not communicating\n");
+		}
+	}
+}
+
+Function fProcessMessageToDevice(String message)
+{
+ 	if (bOkToSend = 1)
+	{
+		bOkToSend = 0;
+		sLastSent = left(message, len(message) -1);
+		call fTimeOut();
+		To_Device = "$e " + message;
+		if (cbDebug)
+			trace("To Device=$e %s sLastSent=%s\n", message, sLastSent);
+	}
+	else
+	{
+		sCommand[iNextCommandStore] = message;
+		iNextCommandStore = iNextCommandStore + 1;
+		if(iNextCommandStore > ciQueueSize)
+		{
+			iNextCommandStore = 1;
+		}
+	}
+}
+
+Function fSendHeartbeat()
+{
+	IF (bIsHeartbeating)
+	{
+		IF (bOKToSend)
+		{
+			fProcessMessageToDevice("NOP\r");
+		}
+
+		WAIT (3000, HEARTBEAT)
+		{
+			IF (bIsHeartbeating)
+				fSendHeartbeat();
+		}
+	}
+}
+
+Function fStartHeartbeat()
+{
+	IF (!bIsHeartbeating)
+	{
+		bIsHeartbeating = 1;
+
+		fSendHeartbeat();
+	}
+}
+
+Function fStopHeartbeat()
+{
+	bIsHeartbeating = 0;
+
+	CANCELWAIT(HEARTBEAT);
+}
+                                              
+Function fSetIsCommunicating()
+{
+	IF (!bIsCommunicating && bInitializationIsComplete)
+	{	
+		bIsCommunicating = 1;
+		fProcessMessageToDevice("PUR\r");
+		if (bPhoneControlInUse)
+		{
+			delay(100);
+			fProcessMessageToDevice("PURSS\r");
+		}
+		trace("Symnet device is communicating\n");
+		fStartHeartbeat();
+	}
+}
+
+Function fInfoTimeOut()
+{
+	wait(ciInfoTimeoutWait, wInfoTimeOut)
+	{
+		iInfoNoAnswerCount = iInfoNoAnswerCount + 1;
+		Info_Timed_Out = 1;
+	}
+}
+
+Function fSendNext()
+{
+	iResendCount =0;
+	if(len(sCommand[iNextCommandSend]) > 0)
+	{
+		sLastSent = left(sCommand[iNextCommandSend], len(sCommand[iNextCommandSend]) -1);
+		if (cbDebug)
+			trace("To Device=$e %s sLastSent=%s\n", sCommand[iNextCommandSend], sLastSent);
+		bOkToSend = 0;
+		call fTimeOut();
+		To_Device = "$e " + sCommand[iNextCommandSend];
+		sCommand[iNextCommandSend] = "";
+		iNextCommandSend = iNextCommandSend + 1;
+		if(iNextCommandSend > ciQueueSize)
+		{
+			iNextCommandSend = 1;
+		}
+	}
+	else
+	{
+		bOkToSend = 1;
+	}
+}
+
+/*******************************************************************************************
+  Event Handlers
+  (Uncomment and declare additional event handlers as needed)
+*******************************************************************************************/
+PUSH Initialize
+{
+	Initialize_Busy = 1;
+	bInitializationIsComplete = 0;
+	iInfoNoAnswerCount = 0;
+	setarray(iControlID1, 0);
+	setarray(iControlID2, 0);
+	setarray(iPhoneUnit, 0);
+	setarray(iPhoneCard, 0);
+	setarray(iPhoneLine, 0);
+	setarray(iControlType, 0);
+	bPhoneControlInUse = 0;
+	iSendInfo = 1;
+	makestring(To_Modules[iSendInfo], "%u %s", iSendInfo, csSendInfo);
+	call fInfoTimeOut();
+}
+
+PUSH Send_Next
+{
+	Timed_Out = 0;
+}
+
+RELEASE Send_Next
+{
+    call fSendNext();
+}
+
+PUSH Get_Next_Info
+{
+	delay(1);
+	Info_Timed_Out = 0;
+	if(iSendInfo < ciMaxInstances && (!Stop_Init_After_10_No_Replies || (Stop_Init_After_10_No_Replies && iInfoNoAnswerCount < 10)))
+	{
+		iSendInfo = iSendInfo + 1;
+		makestring(To_Modules[iSendInfo], "%u %s", iSendInfo, csSendInfo);
+		call fInfoTimeOut();
+	}
+	else
+	{
+		Initialize_Busy = 0;
+		bInitializationIsComplete = 1;
+		Client_Connect = 1;
+	}
+}
+
+Function ProcessModuleMsg()
+{
+	if (cbDebug)
+		Trace("sTempModules=%s\n", sTempModules);
+	if(find("Send Info", sTempModules) > 0)//Info Response
+	{
+		cancelwait(wInfoTimeOut);
+		iInfoNoAnswerCount = 0;
+		if (cbDebug)
+			Trace("Find Send Info\n");
+		iTempInstance = atoi(sTempModules);
+		sTrash = remove("Send Info ", sTempModules);
+		iControlType[iTempInstance] = atoi(sTempModules);
+		if (iControlType[iTempInstance] = ciControlTypePhone || iControlType[iTempInstance] = ciControlTypePhonebook)
+		{
+			bPhoneControlInUse = 1;
+		}
+		if (cbDebug)
+			Trace("iTempInstance=%u iControlType=%u\n", iTempInstance, iControlType[iTempInstance]);
+		
+		if (iControlType[iTempInstance] <> ciControlTypePhonebook)
+		{
+			sTrash = remove("\x20", sTempModules);
+			iControlID1[iTempInstance] = atoi(sTempModules);
+			if (cbDebug)
+				Trace("iControlID1[%u]=%u\n", iTempInstance, iControlID1[iTempInstance]);
+			if (find("\x20", sTempModules))
+			{
+				sTrash = remove("\x20", sTempModules);
+				iControlID2[iTempInstance] = atoi(sTempModules);
+			}
+			else
+			{
+				iControlID2[iTempInstance] = 0;
+			}
+			if (cbDebug)
+				Trace("iControlID2[%u]=%u\n", iTempInstance, iControlID2[iTempInstance]);
+			if (iControlType[iTempInstance] = ciControlTypePhone)
+			{
+				sTrash = remove("\x20", sTempModules);
+				iPhoneUnit[iTempInstance] = atoi(sTempModules);
+				sTrash = remove("\x20", sTempModules);
+				iPhoneCard[iTempInstance] = atoi(sTempModules);
+				sTrash = remove("\x20", sTempModules);
+				iPhoneLine[iTempInstance] = atoi(sTempModules);
+            }
+			else
+			{
+				iPhoneUnit[iTempInstance] = 0;
+				iPhoneCard[iTempInstance] = 0;
+				iPhoneLine[iTempInstance] = 0;
+			}
+		}
+		else
+		{
+			iControlID1[iTempInstance] = 0;
+			iControlID2[iTempInstance] = 0;
+			sTrash = remove("\x20", sTempModules);
+			iPhoneUnit[iTempInstance] = atoi(sTempModules);
+			sTrash = remove("\x20", sTempModules);
+			iPhoneCard[iTempInstance] = atoi(sTempModules);
+			iPhoneLine[iTempInstance] = 0;
+		}
+		if (iControlType[iTempInstance] <> ciControlTypeID)
+		{
+			if (cbDebug)
+			{
+				Trace("iPhoneUnit[%u]=%u, iPhoneCard[%u]=%u, iPhoneLine[%u]=%u\n", iTempInstance, iPhoneUnit[iTempInstance], 
+				iTempInstance, iPhoneCard[iTempInstance], iTempInstance, iPhoneLine[iTempInstance]);
+			}
+		}
+
+		iLastModuleConnected = iSendInfo;
+		if (cbDebug)
+			Trace("iLastModuleConnected=%u\n", iLastModuleConnected);
+		if(iSendInfo < ciMAXINSTANCES)
+		{
+			iSendInfo = iSendInfo + 1;
+			makestring(To_Modules[iSendInfo], "%u %s", iSendInfo, csSendInfo);
+			call fInfoTimeOut();
+		}
+		else
+		{
+			Initialize_Busy = 0;
+			bInitializationIsComplete = 1;
+			bOkToSend = 1;
+			Info_Timed_Out = 1;
+		}
+	}
+	else
+	{
+		if (bInitializationIsComplete && bIsCommunicating)
+			fProcessMessageToDevice(sTempModules);
+	}
+	sTempModules = "";
+}
+
+#if_series3
+THREADSAFE Change From_Modules
+{
+	while(1)
+	{
+		try
+		{
+			sTempModules = gather("\x0D", From_Modules);
+			ProcessModuleMsg();
+		}
+		catch
+		{
+			print("Issue with Module message handling\n");
+		}
+	}
+}
+
+#else
+Threadsafe CHANGE From_Modules
+{
+    if (bFlag1 = 0)
+    {
+    	bFlag1 = 1;
+    	while(1)
+    	{
+			sTempModules = gather("\x0D", From_Modules);
+			ProcessModuleMsg();
+		}
+    	bFlag1 = 0;
+    }
+}
+
+#endif
+
+
+Function ProcessDeviceMsg()
+{
+	if (cbDebug)
+		Trace("Start ProcessDeviceMsg() sTempDevice=%s\n", sTempDevice);
+	if (find("\x23", sTempDevice) = 1)//Push Response
+	{
+		if (cbDebug)
+			Trace("Find Push Response\n");
+		iTempControlID = atoi(sTempDevice);
+		sTemp = right(sTempDevice, len(sTempDevice) - find("=", sTempDevice));
+		iTempValue = atoi(sTemp);
+		if (cbDebug)
+			Trace("iTempControlID=%u, iTempValue=%u\n", iTempControlID, iTempValue);
+		for (a=1 to iLastModuleConnected)
+		{
+			if (iControlType[a] = ciControlTypeID && iControlID2[a] > 0 && ((iControlID1[a] <= iTempControlID) && (iControlID2[a] >= iTempControlID)))
+			{
+				To_Modules[a] = sTempDevice;
+				break;
+			}
+			else if (iControlType[a] = ciControlTypeID && iControlID2[a] = 0 && iControlID1[a] > 0 && (iControlID1[a] = iTempControlID))
+			{
+				To_Modules[a] = sTempDevice;
+				break;
+			}
+			else if (iControlType[a] = ciControlTypePhone && ((iControlID1[a] <= iTempControlID) && (iControlID2[a] >= iTempControlID)))
+			{
+				To_Modules[a] = sTempDevice;
+				break;
+			}
+		}
+	}
+	else if (find("ACK\r", sTempDevice))//ACK response
+	{
+		if (cbDebug)
+			Trace("ACK in, sLastSent=%s\n", sLastSent);
+		cancelwait(wTimeOut);
+		iDeviceMessageTimeoutCount = 0;
+		if (find(sLastSent, sTempDevice))
+		{
+			if (cbDebug)
+				Trace("Last Command ACK in\n");
+			delay(5);
+			bOKToSend = 1;
+			sLastSent = "";
+            call fSendNext();
+   
+            if (find("{SSYSS", sTempDevice))//phone responses
+            {
+            	if (cbDebug)
+            		Trace("Last Command SSYSS ACK in\n");
+            	sTrash = remove("SSYSS ", sTempDevice);
+            	iTempUnit = atoi(sTempDevice);
+            	sTrash = remove(".", sTempDevice);
+            	iTempResource = atoi(sTempDevice);
+            	sTrash = remove(".", sTempDevice);
+            	iTempEnum = atoi(sTempDevice);
+            	sTrash = remove(".", sTempDevice);
+            	iTempCard = atoi(sTempDevice);
+            	sTrash = remove(".", sTempDevice);
+            	iTempChannel = atoi(sTempDevice);
+            	sTrash = remove("=", sTempDevice);
+            	sPhoneData = left(sTempDevice, find("}", sTempDevice)-1);
+		        if (cbDebug)
+		        	Trace("iTempUnit=%u, iTempResource=%u, iTempEnum=%u, iTempCard=%u, iTempChannel=%u, sPhoneData=%s\n", iTempUnit, iTempResource, iTempEnum, iTempCard, iTempChannel, sPhoneData);
+				for (a=1 to iLastModuleConnected)
+				{
+					if (iControlType[a] = ciControlTypePhone && iPhoneUnit[a] = iTempUnit && iPhoneCard[a] = iTempCard && iTempResource > 1001 && iPhoneLine[a] = iTempChannel)
+					{
+						makestring(To_Modules[a], "SSYS %u.%u.%u.%u.%u=%s\r", iTempUnit, iTempResource, iTempEnum, iTempCard, iTempChannel, sPhoneData);
+						break;
+					}
+					else if (iControlType[a] = ciControlTypePhonebook && iPhoneUnit[a] = iTempUnit && iPhoneCard[a] = iTempCard && iTempResource <= 1001)
+					{
+						makestring(To_Modules[a], "SSYS %u.%u.%u.%u.%u=%s\r", iTempUnit, iTempResource, iTempEnum, iTempCard, iTempChannel, sPhoneData);
+						break;
+					}
+				}
+
+            }
+		}
+	}
+
+    else if (find("{GSYSS", sTempDevice) || (find(".100", sTempDevice) < find("=", sTempDevice)))//phone get or push responses
+    {
+		if (find("{GSYSS", sTempDevice))
+		{
+			if (find(sLastSent, sTempDevice))
+			{
+				if (cbDebug)
+					Trace("Last Response GSYSS ACK in\n");
+				delay(5);
+				bOKToSend = 1;
+				sLastSent = "";
+	            call fSendNext();
+    	    }
+
+        	sTrash = remove("GSYSS ", sTempDevice);
+        }
+        else
+        {
+        	if (cbDebug)
+        		Trace("Last Response SYSS Push Response in\n");
+        	sTrash = remove("} ", sTempDevice);
+        }
+        iTempUnit = atoi(sTempDevice);
+        sTrash = remove(".", sTempDevice);
+        iTempResource = atoi(sTempDevice);
+        sTrash = remove(".", sTempDevice);
+        iTempEnum = atoi(sTempDevice);
+        sTrash = remove(".", sTempDevice);
+        iTempCard = atoi(sTempDevice);
+        sTrash = remove(".", sTempDevice);
+        iTempChannel = atoi(sTempDevice);
+        if (find("} ", sTempDevice))
+        {
+        	sTrash = remove("} ", sTempDevice);
+        }
+        else if (find("=", sTempDevice))
+        {
+        	sTrash = remove("=", sTempDevice);
+        }
+       	
+      	sPhoneData = left(sTempDevice, len(sTempDevice)-1);
+        if (cbDebug)
+        	Trace("iTempUnit=%u, iTempResource=%u, iTempEnum=%u, iTempCard=%u, iTempChannel=%u, sPhoneData=%s\n", iTempUnit, iTempResource, iTempEnum, iTempCard, iTempChannel, sPhoneData);
+		for (a=1 to iLastModuleConnected)
+		{
+			if (iControlType[a] = ciControlTypePhone && iPhoneUnit[a] = iTempUnit && iPhoneCard[a] = iTempCard && iTempResource > 1001 && iPhoneLine[a] = iTempChannel)
+			{
+				makestring(To_Modules[a], "SSYS %u.%u.%u.%u.%u=%s\r", iTempUnit, iTempResource, iTempEnum, iTempCard, iTempChannel, sPhoneData);
+				break;
+			}
+			else if (iControlType[a] = ciControlTypePhonebook && iPhoneUnit[a] = iTempUnit && iPhoneCard[a] = iTempCard && iTempResource <= 1001)
+			{
+				makestring(To_Modules[a], "SSYS %u.%u.%u.%u.%u=%s\r", iTempUnit, iTempResource, iTempEnum, iTempCard, iTempChannel, sPhoneData);
+				break;
+			}
+		}
+	}
+
+
+	else if (find("NAK\r", sTempDevice))//NAK response
+	{
+		cancelwait(wTimeOut);
+		iDeviceMessageTimeoutCount = 0;
+		if (cbDebug)
+			Trace("NAK in\n");
+		iResendCount = iResendCount + 1;
+		if (iResendCount < 2)
+		{
+			call fTimeOut();
+			To_Device = "$e " + sLastSent + "\r";
+			if (cbDebug)
+				trace("To Device=$e %s\r sLastSent=%s\n", sLastSent, sLastSent);
+		}
+		else
+		{
+			Trace("Send failed due to NAK count\n");
+			sLastSent = "";
+			bOKToSend = 1;
+			call fSendNext();
+		}
+	}
+	fSetIsCommunicating();
+	sTempDevice = "";
+}
+
+#if_series3
+THREADSAFE Change From_Device
+{
+	while(1)
+	{
+		try
+		{
+			sTempDevice = gather("\x0D", From_Device);
+			ProcessDeviceMsg();
+		}
+		catch
+		{
+			print("Issue with Device message handling\n");
+		}
+	}
+}
+
+#else
+Threadsafe CHANGE From_Device
+{
+    if (bFlag2 = 0)
+    {
+    	bFlag2 = 1;
+    	while(1)
+    	{
+			sTempDevice = gather("\x0D", From_Device);
+			ProcessDeviceMsg();
+		}
+    	bFlag2 = 0;
+    }
+}
+
+#endif
+
+Release Client_Connect_FB
+{
+ 	bIsCommunicating = 0;
+ 	trace("TCP IP Client disconnected - Symnet device not communicating\n");
+}
+
+Change Client_Connect_Status_FB
+{
+ 	if (Client_Connect_Status_FB = 2)
+ 		fProcessMessageToDevice("NOP\r");
+}
+
+
+/*******************************************************************************************
+  Main()
+  Uncomment and place one-time startup code here
+  (This code will get called when the system starts up)
+*******************************************************************************************/
+Function Main()
+{
+	sTempModules = "";
+	sTempDevice = "";
+	setarray(sCommand, "");
+	bInitializationIsComplete = 0;
+	bOkToSend = 1;
+	bFlag1 = 0;
+	bFlag2 = 0;
+	iResendCount = 0;
+	iDeviceMessageTimeoutCount = 0;
+	bIsCommunicating = 0;
+	Client_Connect = 0;
+	bPhoneControlInUse = 0;
+}

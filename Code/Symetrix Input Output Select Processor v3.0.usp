@@ -1,0 +1,136 @@
+/*******************************************************************************************
+  SIMPL+ Module Information
+  (Fill in comments below)
+*******************************************************************************************/
+/*
+Dealer Name:
+System Name:
+System Number:
+Programmer:MK
+Comments:
+*/
+
+/*******************************************************************************************
+  Compiler Directives
+  (Uncomment and declare compiler directives as needed)
+*******************************************************************************************/
+// #ENABLE_DYNAMIC
+#SYMBOL_NAME "Symetrix Input Output Select Processor v3.0"
+// #HINT ""
+#DEFINE_CONSTANT cbDebug 0
+#CATEGORY "34" // Mixer
+// #PRINT_TO_TRACE
+// #DIGITAL_EXPAND 
+// #ANALOG_SERIAL_EXPAND 
+// #OUTPUT_SHIFT 
+// #HELP_PDF_FILE ""
+#DEFAULT_VOLATILE
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+// #ENCODING_ASCII
+// #ENCODING_UTF16
+// #ENCODING_INHERIT_FROM_PARENT
+// #ENCODING_INHERIT_FROM_PROGRAM
+
+#HELP_BEGIN
+To be used only within Symetrix Input Output Select Module
+#HELP_END
+
+
+/*******************************************************************************************
+  Include Libraries
+  (Uncomment and include additional libraries as needed)
+*******************************************************************************************/
+// #CRESTRON_LIBRARY ""
+// #USER_LIBRARY ""
+
+/*******************************************************************************************
+  DIGITAL, ANALOG and SERIAL INPUTS and OUTPUTS
+  (Uncomment and declare inputs and outputs as needed)
+*******************************************************************************************/
+DIGITAL_INPUT _SKIP_, _SKIP_, _SKIP_;
+ANALOG_INPUT Select;
+STRING_INPUT From_Command_Processor[100];
+// BUFFER_INPUT 
+
+DIGITAL_OUTPUT _SKIP_, _SKIP_;
+DIGITAL_OUTPUT Selection_Out_Of_Range;
+ANALOG_OUTPUT Selected;
+STRING_OUTPUT To_Command_Processor;
+
+/*******************************************************************************************
+  Parameters
+  (Uncomment and declare parameters as needed)
+*******************************************************************************************/
+INTEGER_PARAMETER Num_Divisions;
+STRING_PARAMETER Control_ID[5];
+
+
+/*******************************************************************************************
+  Global Variables
+  (Uncomment and declare global variables as needed)
+  Note:  Be sure to initialize all declared STRING variables as needed
+         For example, in Function Main: myString = "";
+*******************************************************************************************/
+INTEGER	iControlValue, iResponseValue;
+STRING iTemp[100];
+
+Integer_Function fGetRounded(Integer V1, Integer V2, Integer V3)
+{
+    LONG_INTEGER LongTemp;
+    INTEGER IntTemp;
+    
+    IntTemp = muldiv(V1, V2, V3);
+    LongTemp = V1 * V2;
+    if (LongTemp UMOD V3 >= V3/2)
+    {
+    	IntTemp = IntTemp + 1;
+    }
+    Return (IntTemp);
+}
+
+/*******************************************************************************************
+  Event Handlers
+  (Uncomment and declare additional event handlers as needed)
+*******************************************************************************************/
+CHANGE Select
+{
+	If (Select >= 1 && Select <= Num_Divisions)
+	{
+		Selection_Out_Of_Range = 0;
+		iControlValue = fGetRounded(Select-1, 65535, Num_Divisions-1);
+		makestring(To_Command_Processor, "CS %s %05u\r", Control_ID, iControlValue);
+	}
+	Else
+	{
+		Selection_Out_Of_Range = 1;
+	}
+}
+
+CHANGE From_Command_Processor
+{
+    if (find("Send Info\r", From_Command_Processor))
+    {
+    	makestring(To_Command_Processor, "%u Send Info 0 %s\r", atoi(From_Command_Processor), Control_ID);
+    }
+
+    else if (atoi(Control_ID) = atoi(From_Command_Processor))
+    {
+    	iTemp = remove("=", From_Command_Processor);
+    	iResponseValue = atoi(From_Command_Processor);
+    	Selected = fGetRounded(iResponseValue, Num_Divisions-1, 65535) + 1;
+    }
+}
+
+/*******************************************************************************************
+  Main()
+  Uncomment and place one-time startup code here
+  (This code will get called when the system starts up)
+*******************************************************************************************/
+
+Function Main()
+{
+	Selection_Out_Of_Range = 0;
+}
+
+
