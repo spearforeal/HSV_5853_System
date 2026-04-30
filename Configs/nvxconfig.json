@@ -1,0 +1,8 @@
+{
+  "nvxconfig": {
+    "Encoder01Address": ["239.8.2.0"],
+    "Encoder02Address": ["239.8.2.8"],
+    "Encoder03Address": ["239.8.2.16"],
+    "Encoder04Address": ["239.8.2.24"]
+  }
+}
