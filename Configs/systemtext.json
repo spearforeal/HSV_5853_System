@@ -1,0 +1,24 @@
+{
+  "SystemText": {
+    "WelcomeText": ["Touch Screen to Start"],
+    "ShutdownInstructions": ["Are you sure you want to shutdown?"],
+    "RoutingInstructions": [
+      "Select the source and location you would like to route the source to."
+    ],
+    "HelpMessage": [
+      "Some really long text with a phone number like 555-555-5555"
+    ],
+    "Mode1Name": ["Mode 1"],
+    "Mode2Name": ["Mode 2"],
+    "Mode3Name": ["Mode 3"],
+    "Mode4Name": ["Mode 4"],
+    "Mode5Name": ["Mode 5"],
+    "Mode6Name": ["Mode 6"],
+    "Mode7Name": ["Mode 7"],
+    "Mode8Name": ["Mode 8"],
+    "Mode9Name": ["Mode 9"],
+    "Mode10Name": ["Mode 10"],
+    "Mode11Name": ["Mode 11"],
+    "Mode12Name": ["Mode 12"]
+  }
+}

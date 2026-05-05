@@ -1,0 +1,32 @@
+{
+  "banquetconfig": {
+    "Source1Name": ["Source 1"],
+    "Source2Name": ["Source 2"],
+    "Source3Name": ["Source 3"],
+    "Source4Name": ["Source 4"],
+    "Source5Name": ["Source 5"],
+    "Source6Name": ["Source 6"],
+    "Source7Name": ["Source 7"],
+    "Source8Name": ["Source 8"],
+    "Source9Name": ["Source 9"],
+    "Source10Name": ["Source 10"],
+
+    "Destination1Name": ["Output 1"],
+    "Destination2Name": ["Output 2"],
+    "Destination3Name": ["Output 3"],
+    "Destination4Name": ["Output 4"],
+    "Destination5Name": ["Output 5"],
+    "Destination6Name": ["Output 6"],
+    "Destination7Name": ["Output 7"],
+    "Destination8Name": ["Output 8"],
+    "Destination9Name": ["Output 9"],
+    "Destination10Name": ["Output 10"],
+    "Destination11Name": ["Output 11"],
+    "Destination12Name": ["Output 12"],
+    "Destination13Name": ["Output 13"],
+    "Destination14Name": ["Output 14"],
+    "Destination15Name": ["Output 15"],
+    "Destination16Name": ["Output 16"],
+    "Destination17Name": ["Output 17"]
+  }
+}
