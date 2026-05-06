@@ -8,6 +8,8 @@
     "HelpMessage": [
       "Some really long text with a phone number like 555-555-5555"
     ],
+    "RoomModeInstructions": ["Something about changing the room configuration"],
+
     "Mode1Name": ["Routing"],
     "Mode2Name": ["Audio Controls"],
     "Mode3Name": ["Mode 3"],
