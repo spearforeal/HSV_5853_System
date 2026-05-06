@@ -19,6 +19,9 @@
     "Mode9Name": ["Mode 9"],
     "Mode10Name": ["Mode 10"],
     "Mode11Name": ["Mode 11"],
-    "Mode12Name": ["Mode 12"]
+    "Mode12Name": ["Mode 12"],
+
+    "SeparateStateName": ["Separate"],
+    "CombineStateName": ["Combined"]
   }
 }
