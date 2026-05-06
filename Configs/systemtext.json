@@ -8,8 +8,8 @@
     "HelpMessage": [
       "Some really long text with a phone number like 555-555-5555"
     ],
-    "Mode1Name": ["Mode 1"],
-    "Mode2Name": ["Mode 2"],
+    "Mode1Name": ["Routing"],
+    "Mode2Name": ["Audio Controls"],
     "Mode3Name": ["Mode 3"],
     "Mode4Name": ["Mode 4"],
     "Mode5Name": ["Mode 5"],
@@ -22,6 +22,8 @@
     "Mode12Name": ["Mode 12"],
 
     "SeparateStateName": ["Separate"],
-    "CombineStateName": ["Combined"]
+    "CombineStateName": ["Combined"],
+    "NorthBanquetName": ["North Banquet"],
+    "SouthBanquetName": ["South Banquet"]
   }
 }
