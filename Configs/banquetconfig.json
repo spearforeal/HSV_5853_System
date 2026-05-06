@@ -1,5 +1,18 @@
 {
   "banquetconfig": {
+    "Mode1Visible": ["True"],
+    "Mode2Visible": ["True"],
+    "Mode3Visible": ["True"],
+    "Mode4Visible": ["True"],
+    "Mode5Visible": ["True"],
+    "Mode6Visible": ["True"],
+    "Mode7Visible": ["True"],
+    "Mode8Visible": ["True"],
+    "Mode9Visible": ["True"],
+    "Mode10Visible": ["True"],
+    "Mode11Visible": ["True"],
+    "Mode12Visible": ["True"],
+
     "Source1Name": ["Source 1"],
     "Source2Name": ["Source 2"],
     "Source3Name": ["Source 3"],
@@ -28,5 +41,35 @@
     "Destination15Name": ["Output 15"],
     "Destination16Name": ["Output 16"],
     "Destination17Name": ["Output 17"]
+  },
+  "northbanquet": {
+    "Source1Visible": ["True"],
+    "Source2Visible": ["True"],
+    "Source3Visible": ["True"],
+    "Source4Visible": ["True"],
+    "Source5Visible": ["False"],
+    "Source6Visible": ["False"],
+    "Source7Visible": ["False"],
+    "Source8Visible": ["False"],
+    "Source9Visible": ["False"],
+    "Source10Visible": ["False"],
+
+    "Destination1Visible": ["True"],
+    "Destination2Visible": ["True"],
+    "Destination3Visible": ["False"],
+    "Destination4Visible": ["False"],
+    "Destination5Visible": ["False"],
+    "Destination6Visible": ["False"],
+    "Destination7Visible": ["False"],
+    "Destination8Visible": ["False"],
+    "Destination9Visible": ["False"],
+    "Destination10Visible": ["False"],
+    "Destination11Visible": ["False"],
+    "Destination12Visible": ["False"],
+    "Destination13Visible": ["False"],
+    "Destination14Visible": ["False"],
+    "Destination15Visible": ["False"],
+    "Destination16Visible": ["False"],
+    "Destination17Visible": ["False"]
   }
 }
