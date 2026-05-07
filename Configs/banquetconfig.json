@@ -40,7 +40,13 @@
     "Destination14Name": ["Output 14"],
     "Destination15Name": ["Output 15"],
     "Destination16Name": ["Output 16"],
-    "Destination17Name": ["Output 17"]
+    "Destination17Name": ["Output 17"],
+
+    "AudioControlSideMenu1Visible": ["True"],
+    "AudioControlSideMenu2Visible": ["True"],
+    "AudioControlSideMenu3Visible": ["True"],
+    "AudioControlSideMenu4Visible": ["True"],
+    "AudioControlSideMenu5Visible": ["True"]
   },
   "northbanquet": {
     "Source1Visible": ["True"],
@@ -70,6 +76,22 @@
     "Destination14Visible": ["False"],
     "Destination15Visible": ["False"],
     "Destination16Visible": ["False"],
-    "Destination17Visible": ["False"]
+    "Destination17Visible": ["False"],
+
+    "AudioControl1Visible": ["True"],
+    "AudioControl2Visible": ["True"],
+    "AudioControl3Visible": ["True"],
+    "AudioControl4Visible": ["True"],
+    "AudioControl5Visible": ["True"],
+    "AudioControl6Visible": ["True"],
+    "AudioControl7Visible": ["True"],
+
+    "MicControl1Visible": ["True"],
+    "MicControl2Visible": ["True"],
+    "MicControl3Visible": ["True"],
+    "MicControl4Visible": ["True"],
+    "MicControl5Visible": ["True"],
+    "MicControl6Visible": ["True"],
+    "MicControl7Visible": ["True"]
   }
 }
