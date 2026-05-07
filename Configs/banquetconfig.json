@@ -39,6 +39,7 @@
     "Mode11Visible": ["True"],
     "Mode12Visible": ["True"],
 
+    "Source0Name": ["Clear"],
     "Source1Name": ["Source 1"],
     "Source2Name": ["Source 2"],
     "Source3Name": ["Source 3"],
@@ -49,6 +50,18 @@
     "Source8Name": ["Source 8"],
     "Source9Name": ["Source 9"],
     "Source10Name": ["Source 10"],
+
+    "Source0Icon": ["Delete"],
+    "Source1Icon": ["Laptop"],
+    "Source2Icon": ["Laptop"],
+    "Source3Icon": ["Laptop"],
+    "Source4Icon": ["Laptop"],
+    "Source5Icon": ["Laptop"],
+    "Source6Icon": ["Laptop"],
+    "Source7Icon": ["Laptop"],
+    "Source8Icon": ["Laptop"],
+    "Source9Icon": ["Laptop"],
+    "Source10Icon": ["Laptop"],
 
     "Destination1Name": ["Output 1"],
     "Destination2Name": ["Output 2"],
