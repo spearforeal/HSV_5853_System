@@ -85,7 +85,13 @@
     "AudioControlSideMenu2Visible": ["True"],
     "AudioControlSideMenu3Visible": ["True"],
     "AudioControlSideMenu4Visible": ["True"],
-    "AudioControlSideMenu5Visible": ["True"]
+    "AudioControlSideMenu5Visible": ["True"],
+
+    "AudioControlSideMenu1Name": ["Line"],
+    "AudioControlSideMenu2Name": ["Mic"],
+    "AudioControlSideMenu3Name": ["Line"],
+    "AudioControlSideMenu4Name": ["Line"],
+    "AudioControlSideMenu5Name": ["Line"]
   },
   "northbanquet": {
     "Source1Visible": ["True"],
