@@ -10,7 +10,7 @@ VTProeVer=6.2.02
 ObjTp=Symbol
 Name=HSV_5853_TSW_750_Footer_FooterBtn.ced
 Hint=FooterBtn (Smart Object ID=11)
-Code=1
+Code=2
 SGControlType=Subpage Reference List Horizontal
 SGControlName=FooterBtn
 GUID=74835474-89D5-45AD-B043-277A37DD4181
@@ -192,14 +192,14 @@ OutputList3SigType13=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=1
-CedH=1
+Pp1=2
+CedH=2
 SmartObjId=11d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=1
+H=2
 Tp=1
 HD=TRUE
 DV=11d
@@ -212,7 +212,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=1
+H=2
 Name=HSV_5853_TSW_750_Footer_FooterBtn.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.

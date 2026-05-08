@@ -10,7 +10,7 @@ VTProeVer=6.2.02
 ObjTp=Symbol
 Name=HSV_5853_TSW_750_[MODE]Routing_RoutingSourceList.ced
 Hint=RoutingSourceList (Smart Object ID=2)
-Code=4
+Code=5
 SGControlType=Subpage Reference List Horizontal
 SGControlName=RoutingSourceList
 GUID=87EB74FC-CCAA-402C-A787-8E721F993239
@@ -416,14 +416,14 @@ OutputList3SigType32=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=4
-CedH=4
+Pp1=5
+CedH=5
 SmartObjId=2d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=4
+H=5
 Tp=1
 HD=TRUE
 DV=2d
@@ -436,7 +436,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=4
+H=5
 Name=HSV_5853_TSW_750_[MODE]Routing_RoutingSourceList.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.

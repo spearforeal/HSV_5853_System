@@ -10,7 +10,7 @@ VTProeVer=6.2.02
 ObjTp=Symbol
 Name=HSV_5853_TSW_750_[MODE]AudioMicControl_MicControlHori.ced
 Hint=MicControlHori (Smart Object ID=9)
-Code=9
+Code=10
 SGControlType=Subpage Reference List Vertical
 SGControlName=MicControlHori
 GUID=313E30B8-392A-4899-8F05-1B98E1B0401A
@@ -436,14 +436,14 @@ OutputList3SigType20=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=9
-CedH=9
+Pp1=10
+CedH=10
 SmartObjId=9d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=9
+H=10
 Tp=1
 HD=TRUE
 DV=9d
@@ -456,7 +456,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=9
+H=10
 Name=HSV_5853_TSW_750_[MODE]AudioMicControl_MicControlHori.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.

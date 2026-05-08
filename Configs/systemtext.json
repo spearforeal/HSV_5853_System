@@ -15,6 +15,7 @@
     "NorthBanquetName": ["North Banquet"],
     "SouthBanquetName": ["South Banquet"],
     "BanquetCombinedName": ["Combined Banquet"],
-    "StartPageBGMButtonName": ["BGM"]
+    "StartPageBGMButtonName": ["BGM"],
+    "BanquetRoomModeButtonName": ["Room Mode"]
   }
 }

@@ -8,22 +8,22 @@ VTProeVer=6.2.02
 ]
 [
 ObjTp=Symbol
-Name=HSV_5853_TSW_750_[MODE]AudioMicControl_AudioControlPage1Title.ced
-Hint=AudioControlPage1Title (Smart Object ID=7)
-Code=9
-SGControlType=Subpage Reference List Horizontal
-SGControlName=AudioControlPage1Title
-GUID=1363ABF5-BD6D-4A23-A86D-4B99A54E52D1
-SmplCName=HSV_5853_TSW_750_[MODE]AudioMicControl_AudioControlPage1Title.ced
+Name=HSV_5853_TSW_750_Start_BGM Welcome btn.ced
+Hint=BGM Welcome btn (Smart Object ID=21)
+Code=1
+SGControlType=Subpage Reference List Vertical
+SGControlName=BGM Welcome btn
+GUID=C100BF42-B435-457E-A47E-7DAA219D969A
+SmplCName=HSV_5853_TSW_750_Start_BGM Welcome btn.ced
 SMWRev=4.02.20
 Expand=expand_random
-HelpID=10124
+HelpID=10125
 Render=8
 ;Define the number of inputs, outputs and parameters
-MinVariableInputs=4014
-MaxVariableInputs=4014
-MinVariableOutputs=4014
-MaxVariableOutputs=4014
+MinVariableInputs=4017
+MaxVariableInputs=4017
+MinVariableOutputs=4017
+MaxVariableOutputs=4017
 NumFixedParams=1
 MinVariableInputsList2=3
 MaxVariableInputsList2=3
@@ -77,6 +77,12 @@ InputCue2015=[~UNUSED2~]
 InputSigType2015=Digital|Analog|Serial|String
 InputCue4014=[~EndGroup~]Visible
 InputSigType4014=Digital
+InputCue4015=[~BeginGroup~]fb
+InputSigType4015=Digital
+InputCue4016=fb1
+InputSigType4016=Digital
+InputCue4017=[~EndGroup~]fb
+InputSigType4017=Digital
 OutputCue1=Is Moving
 OutputSigType1=Digital
 OutputCue2=[~UNUSED2~]
@@ -113,6 +119,12 @@ OutputCue2015=[~UNUSED2~]
 OutputSigType2015=Digital|Analog|Serial|String
 OutputCue4014=[~EndGroup~]Visible
 OutputSigType4014=Digital
+OutputCue4015=[~BeginGroup~]Press
+OutputSigType4015=Digital
+OutputCue4016=press1
+OutputSigType4016=Digital
+OutputCue4017=[~EndGroup~]Press
+OutputSigType4017=Digital
 InputList2Cue1=[~UNUSED3~]
 InputList2SigType1=Analog
 InputList2Cue2=Scroll To Item
@@ -180,17 +192,17 @@ OutputList3SigType13=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=9
-CedH=9
-SmartObjId=7d
+Pp1=1
+CedH=1
+SmartObjId=21d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=9
+H=1
 Tp=1
 HD=TRUE
-DV=7d
+DV=21d
 NF=1
 DNF=1
 EncFmt=0
@@ -200,8 +212,8 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=9
-Name=HSV_5853_TSW_750_[MODE]AudioMicControl_AudioControlPage1Title.ced
+H=1
+Name=HSV_5853_TSW_750_Start_BGM Welcome btn.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
 CedVer=1
