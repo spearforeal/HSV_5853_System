@@ -13,6 +13,7 @@
     "SeparateStateName": ["Separate"],
     "CombineStateName": ["Combined"],
     "NorthBanquetName": ["North Banquet"],
-    "SouthBanquetName": ["South Banquet"]
+    "SouthBanquetName": ["South Banquet"],
+    "StartPageBGMButtonName": ["BGM"]
   }
 }
