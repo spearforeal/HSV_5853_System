@@ -208,8 +208,8 @@
   },
 
   "banquetcombined": {
-    "Source1Visible": ["False"],
-    "Source2Visible": ["False"],
+    "Source1Visible": ["True"],
+    "Source2Visible": ["True"],
     "Source3Visible": ["True"],
     "Source4Visible": ["True"],
     "Source5Visible": ["False"],
@@ -219,8 +219,8 @@
     "Source9Visible": ["False"],
     "Source10Visible": ["False"],
 
-    "Destination1Visible": ["False"],
-    "Destination2Visible": ["False"],
+    "Destination1Visible": ["True"],
+    "Destination2Visible": ["True"],
     "Destination3Visible": ["True"],
     "Destination4Visible": ["True"],
     "Destination5Visible": ["False"],
