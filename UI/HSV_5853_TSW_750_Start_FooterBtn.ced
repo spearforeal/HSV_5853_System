@@ -8,13 +8,13 @@ VTProeVer=6.2.02
 ]
 [
 ObjTp=Symbol
-Name=HSV_5853_TSW_750_Footer_FooterBtn.ced
+Name=HSV_5853_TSW_750_Start_FooterBtn.ced
 Hint=FooterBtn (Smart Object ID=11)
 Code=2
 SGControlType=Subpage Reference List Horizontal
 SGControlName=FooterBtn
-GUID=74835474-89D5-45AD-B043-277A37DD4181
-SmplCName=HSV_5853_TSW_750_Footer_FooterBtn.ced
+GUID=969B0023-9CB2-457F-8AC0-35A6BFE3D408
+SmplCName=HSV_5853_TSW_750_Start_FooterBtn.ced
 SMWRev=4.02.20
 Expand=expand_random
 HelpID=10124
@@ -213,7 +213,7 @@ Sgn=0
 [
 ObjTp=CED
 H=2
-Name=HSV_5853_TSW_750_Footer_FooterBtn.ced
+Name=HSV_5853_TSW_750_Start_FooterBtn.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
 CedVer=1
