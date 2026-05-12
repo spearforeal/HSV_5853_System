@@ -120,7 +120,16 @@
     "LightingPreset5Name": ["Preset5"],
     "LightingPreset6Name": ["Preset6"],
     "LightingPreset7Name": ["Preset7"],
-    "LightingPreset8Name": ["Preset8"]
+    "LightingPreset8Name": ["Preset8"],
+
+    "ShadePreset1Icon": ["Up Alt"],
+    "ShadePreset2Icon": ["Down Alt"],
+    "ShadePreset3Icon": ["Up Alt"],
+    "ShadePreset4Icon": ["Down Alt"],
+    "ShadePreset5Icon": ["Up Alt"],
+    "ShadePreset6Icon": ["Down Alt"],
+    "ShadePreset7Icon": ["Up Alt"],
+    "ShadePreset8Icon": ["Down Alt"]
   },
   "northbanquet": {
     "Source1Visible": ["True"],
@@ -175,7 +184,16 @@
     "LightingPreset5Visible": ["True"],
     "LightingPreset6Visible": ["True"],
     "LightingPreset7Visible": ["True"],
-    "LightingPreset8Visible": ["True"]
+    "LightingPreset8Visible": ["True"],
+
+    "ShadePreset1Visible": ["True"],
+    "ShadePreset2Visible": ["True"],
+    "ShadePreset3Visible": ["True"],
+    "ShadePreset4Visible": ["True"],
+    "ShadePreset5Visible": ["True"],
+    "ShadePreset6Visible": ["True"],
+    "ShadePreset7Visible": ["True"],
+    "ShadePreset8Visible": ["True"]
   },
 
   "southbanquet": {
@@ -231,7 +249,16 @@
     "LightingPreset5Visible": ["True"],
     "LightingPreset6Visible": ["True"],
     "LightingPreset7Visible": ["True"],
-    "LightingPreset8Visible": ["True"]
+    "LightingPreset8Visible": ["True"],
+
+    "ShadePreset1Visible": ["True"],
+    "ShadePreset2Visible": ["True"],
+    "ShadePreset3Visible": ["True"],
+    "ShadePreset4Visible": ["True"],
+    "ShadePreset5Visible": ["True"],
+    "ShadePreset6Visible": ["True"],
+    "ShadePreset7Visible": ["True"],
+    "ShadePreset8Visible": ["True"]
   },
 
   "banquetcombined": {
