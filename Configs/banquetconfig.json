@@ -113,15 +113,6 @@
     "MicControl7Name": ["Ctrl 7"],
     "MicControl8Name": ["Ctrl 8"],
 
-    "LightingPreset1Visible": ["True"],
-    "LightingPreset2Visible": ["True"],
-    "LightingPreset3Visible": ["True"],
-    "LightingPreset4Visible": ["True"],
-    "LightingPreset5Visible": ["True"],
-    "LightingPreset6Visible": ["True"],
-    "LightingPreset7Visible": ["True"],
-    "LightingPreset8Visible": ["True"],
-
     "LightingPreset1Name": ["Preset1"],
     "LightingPreset2Name": ["Preset2"],
     "LightingPreset3Name": ["Preset3"],
@@ -175,7 +166,16 @@
     "MicControl4Visible": ["False"],
     "MicControl5Visible": ["False"],
     "MicControl6Visible": ["False"],
-    "MicControl7Visible": ["False"]
+    "MicControl7Visible": ["False"],
+
+    "LightingPreset1Visible": ["True"],
+    "LightingPreset2Visible": ["True"],
+    "LightingPreset3Visible": ["True"],
+    "LightingPreset4Visible": ["True"],
+    "LightingPreset5Visible": ["True"],
+    "LightingPreset6Visible": ["True"],
+    "LightingPreset7Visible": ["True"],
+    "LightingPreset8Visible": ["True"]
   },
 
   "southbanquet": {
@@ -222,7 +222,16 @@
     "MicControl4Visible": ["True"],
     "MicControl5Visible": ["True"],
     "MicControl6Visible": ["True"],
-    "MicControl7Visible": ["True"]
+    "MicControl7Visible": ["True"],
+
+    "LightingPreset1Visible": ["True"],
+    "LightingPreset2Visible": ["True"],
+    "LightingPreset3Visible": ["True"],
+    "LightingPreset4Visible": ["True"],
+    "LightingPreset5Visible": ["True"],
+    "LightingPreset6Visible": ["True"],
+    "LightingPreset7Visible": ["True"],
+    "LightingPreset8Visible": ["True"]
   },
 
   "banquetcombined": {
@@ -269,6 +278,15 @@
     "MicControl4Visible": ["True"],
     "MicControl5Visible": ["True"],
     "MicControl6Visible": ["True"],
-    "MicControl7Visible": ["True"]
+    "MicControl7Visible": ["True"],
+
+    "LightingPreset1Visible": ["True"],
+    "LightingPreset2Visible": ["True"],
+    "LightingPreset3Visible": ["True"],
+    "LightingPreset4Visible": ["True"],
+    "LightingPreset5Visible": ["True"],
+    "LightingPreset6Visible": ["True"],
+    "LightingPreset7Visible": ["True"],
+    "LightingPreset8Visible": ["True"]
   }
 }
