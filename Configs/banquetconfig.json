@@ -272,21 +272,12 @@
     "AudioControl6Visible": ["False"],
     "AudioControl7Visible": ["False"],
 
-    "MicControl1Visible": ["False"],
-    "MicControl2Visible": ["False"],
-    "MicControl3Visible": ["False"],
+    "MicControl1Visible": ["True"],
+    "MicControl2Visible": ["True"],
+    "MicControl3Visible": ["True"],
     "MicControl4Visible": ["True"],
     "MicControl5Visible": ["True"],
     "MicControl6Visible": ["True"],
-    "MicControl7Visible": ["True"],
-
-    "LightingPreset1Visible": ["True"],
-    "LightingPreset2Visible": ["True"],
-    "LightingPreset3Visible": ["True"],
-    "LightingPreset4Visible": ["True"],
-    "LightingPreset5Visible": ["True"],
-    "LightingPreset6Visible": ["True"],
-    "LightingPreset7Visible": ["True"],
-    "LightingPreset8Visible": ["True"]
+    "MicControl7Visible": ["True"]
   }
 }
