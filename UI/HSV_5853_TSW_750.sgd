@@ -3988,13 +3988,13 @@ CedVer=1
 ;================================================================================
 [
 ObjTp=Symbol
-Name=HSV_5853_TSW_750_[MODE]Lighting_L&SPageTitle.ced
-Hint=L&SPageTitle (Smart Object ID=22)
+Name=HSV_5853_TSW_750_[MODE]Lighting_LightingPageTitle.ced
+Hint=LightingPageTitle (Smart Object ID=22)
 Code=14
 SGControlType=Subpage Reference List Horizontal
-SGControlName=L&SPageTitle
+SGControlName=LightingPageTitle
 GUID=C6A28EC0-F28E-4AE4-A7C6-BB51B81706C9
-SmplCName=HSV_5853_TSW_750_[MODE]Lighting_L&SPageTitle.ced
+SmplCName=HSV_5853_TSW_750_[MODE]Lighting_LightingPageTitle.ced
 SMWRev=4.02.20
 Expand=expand_random
 HelpID=10124
@@ -4181,7 +4181,7 @@ Sgn=0
 [
 ObjTp=CED
 H=14
-Name=HSV_5853_TSW_750_[MODE]Lighting_L&SPageTitle.ced
+Name=HSV_5853_TSW_750_[MODE]Lighting_LightingPageTitle.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
 CedVer=1
@@ -4189,13 +4189,13 @@ CedVer=1
 ;================================================================================
 [
 ObjTp=Symbol
-Name=HSV_5853_TSW_750_[MODE]Lighting_LightingSpearatePresets.ced
-Hint=LightingSpearatePresets (Smart Object ID=23)
+Name=HSV_5853_TSW_750_[MODE]Lighting_LightingTopPresets.ced
+Hint=LightingTopPresets (Smart Object ID=23)
 Code=15
 SGControlType=Subpage Reference List Horizontal
-SGControlName=LightingSpearatePresets
+SGControlName=LightingTopPresets
 GUID=DEB7553E-B87A-4DF1-A076-0EFED97A87AE
-SmplCName=HSV_5853_TSW_750_[MODE]Lighting_LightingSpearatePresets.ced
+SmplCName=HSV_5853_TSW_750_[MODE]Lighting_LightingTopPresets.ced
 SMWRev=4.02.20
 Expand=expand_random
 HelpID=10124
@@ -4506,7 +4506,7 @@ Sgn=0
 [
 ObjTp=CED
 H=15
-Name=HSV_5853_TSW_750_[MODE]Lighting_LightingSpearatePresets.ced
+Name=HSV_5853_TSW_750_[MODE]Lighting_LightingTopPresets.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
 CedVer=1
@@ -4514,13 +4514,13 @@ CedVer=1
 ;================================================================================
 [
 ObjTp=Symbol
-Name=HSV_5853_TSW_750_[MODE]Lighting_LightingSubControlHeader.ced
-Hint=LightingSubControlHeader (Smart Object ID=24)
+Name=HSV_5853_TSW_750_[MODE]Lighting_LightingControlTopHeader.ced
+Hint=LightingControlTopHeader (Smart Object ID=24)
 Code=16
 SGControlType=Subpage Reference List Horizontal
-SGControlName=LightingSubControlHeader
+SGControlName=LightingControlTopHeader
 GUID=658D1247-CDB6-4495-86F5-64AFCEE324E1
-SmplCName=HSV_5853_TSW_750_[MODE]Lighting_LightingSubControlHeader.ced
+SmplCName=HSV_5853_TSW_750_[MODE]Lighting_LightingControlTopHeader.ced
 SMWRev=4.02.20
 Expand=expand_random
 HelpID=10124
@@ -4707,7 +4707,7 @@ Sgn=0
 [
 ObjTp=CED
 H=16
-Name=HSV_5853_TSW_750_[MODE]Lighting_LightingSubControlHeader.ced
+Name=HSV_5853_TSW_750_[MODE]Lighting_LightingControlTopHeader.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
 CedVer=1
@@ -4715,13 +4715,13 @@ CedVer=1
 ;================================================================================
 [
 ObjTp=Symbol
-Name=HSV_5853_TSW_750_[MODE]Lighting_LightingCombinePresets.ced
-Hint=LightingCombinePresets (Smart Object ID=25)
+Name=HSV_5853_TSW_750_[MODE]Lighting_LightingBottomPresets.ced
+Hint=LightingBottomPresets (Smart Object ID=25)
 Code=17
 SGControlType=Subpage Reference List Horizontal
-SGControlName=LightingCombinePresets
+SGControlName=LightingBottomPresets
 GUID=83AD972E-405A-4C47-974C-88E375A6E42F
-SmplCName=HSV_5853_TSW_750_[MODE]Lighting_LightingCombinePresets.ced
+SmplCName=HSV_5853_TSW_750_[MODE]Lighting_LightingBottomPresets.ced
 SMWRev=4.02.20
 Expand=expand_random
 HelpID=10124
@@ -5032,7 +5032,7 @@ Sgn=0
 [
 ObjTp=CED
 H=17
-Name=HSV_5853_TSW_750_[MODE]Lighting_LightingCombinePresets.ced
+Name=HSV_5853_TSW_750_[MODE]Lighting_LightingBottomPresets.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
 CedVer=1
@@ -5040,13 +5040,13 @@ CedVer=1
 ;================================================================================
 [
 ObjTp=Symbol
-Name=HSV_5853_TSW_750_[MODE]Lighting_LightingSubSecondaryControlHeader.ced
-Hint=LightingSubSecondaryControlHeader (Smart Object ID=26)
+Name=HSV_5853_TSW_750_[MODE]Lighting_LightingControlBottomHeader.ced
+Hint=LightingControlBottomHeader (Smart Object ID=26)
 Code=18
 SGControlType=Subpage Reference List Horizontal
-SGControlName=LightingSubSecondaryControlHeader
+SGControlName=LightingControlBottomHeader
 GUID=903CFC28-25F8-499C-8610-27DCA1AEB3D8
-SmplCName=HSV_5853_TSW_750_[MODE]Lighting_LightingSubSecondaryControlHeader.ced
+SmplCName=HSV_5853_TSW_750_[MODE]Lighting_LightingControlBottomHeader.ced
 SMWRev=4.02.20
 Expand=expand_random
 HelpID=10124
@@ -5233,7 +5233,7 @@ Sgn=0
 [
 ObjTp=CED
 H=18
-Name=HSV_5853_TSW_750_[MODE]Lighting_LightingSubSecondaryControlHeader.ced
+Name=HSV_5853_TSW_750_[MODE]Lighting_LightingControlBottomHeader.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
 CedVer=1

@@ -8,13 +8,13 @@ VTProeVer=6.2.02
 ]
 [
 ObjTp=Symbol
-Name=HSV_5853_TSW_750_[MODE]Lighting_L&SPageTitle.ced
-Hint=L&SPageTitle (Smart Object ID=22)
-Code=14
+Name=HSV_5853_TSW_750_[MODE]Lighting_LightingControlTopHeader.ced
+Hint=LightingControlTopHeader (Smart Object ID=24)
+Code=16
 SGControlType=Subpage Reference List Horizontal
-SGControlName=L&SPageTitle
-GUID=C6A28EC0-F28E-4AE4-A7C6-BB51B81706C9
-SmplCName=HSV_5853_TSW_750_[MODE]Lighting_L&SPageTitle.ced
+SGControlName=LightingControlTopHeader
+GUID=658D1247-CDB6-4495-86F5-64AFCEE324E1
+SmplCName=HSV_5853_TSW_750_[MODE]Lighting_LightingControlTopHeader.ced
 SMWRev=4.02.20
 Expand=expand_random
 HelpID=10124
@@ -180,17 +180,17 @@ OutputList3SigType13=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=14
-CedH=14
-SmartObjId=22d
+Pp1=16
+CedH=16
+SmartObjId=24d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=14
+H=16
 Tp=1
 HD=TRUE
-DV=22d
+DV=24d
 NF=1
 DNF=1
 EncFmt=0
@@ -200,8 +200,8 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=14
-Name=HSV_5853_TSW_750_[MODE]Lighting_L&SPageTitle.ced
+H=16
+Name=HSV_5853_TSW_750_[MODE]Lighting_LightingControlTopHeader.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
 CedVer=1

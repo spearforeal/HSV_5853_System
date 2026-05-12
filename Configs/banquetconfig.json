@@ -85,9 +85,9 @@
 
     "AudioControlSideMenu1Visible": ["True"],
     "AudioControlSideMenu2Visible": ["True"],
-    "AudioControlSideMenu3Visible": ["True"],
-    "AudioControlSideMenu4Visible": ["True"],
-    "AudioControlSideMenu5Visible": ["True"],
+    "AudioControlSideMenu3Visible": ["False"],
+    "AudioControlSideMenu4Visible": ["False"],
+    "AudioControlSideMenu5Visible": ["False"],
 
     "AudioControlSideMenu1Name": ["Line"],
     "AudioControlSideMenu2Name": ["Mic"],
@@ -111,7 +111,25 @@
     "MicControl5Name": ["Ctrl 5"],
     "MicControl6Name": ["Ctrl 6"],
     "MicControl7Name": ["Ctrl 7"],
-    "MicControl8Name": ["Ctrl 8"]
+    "MicControl8Name": ["Ctrl 8"],
+
+    "LightingPreset1Visible": ["True"],
+    "LightingPreset2Visible": ["True"],
+    "LightingPreset3Visible": ["True"],
+    "LightingPreset4Visible": ["True"],
+    "LightingPreset5Visible": ["True"],
+    "LightingPreset6Visible": ["True"],
+    "LightingPreset7Visible": ["True"],
+    "LightingPreset8Visible": ["True"],
+
+    "LightingPreset1Name": ["Preset1"],
+    "LightingPreset2Name": ["Preset2"],
+    "LightingPreset3Name": ["Preset3"],
+    "LightingPreset4Name": ["Preset4"],
+    "LightingPreset5Name": ["Preset5"],
+    "LightingPreset6Name": ["Preset6"],
+    "LightingPreset7Name": ["Preset7"],
+    "LightingPreset8Name": ["Preset8"]
   },
   "northbanquet": {
     "Source1Visible": ["True"],
