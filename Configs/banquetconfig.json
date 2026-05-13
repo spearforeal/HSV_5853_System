@@ -330,6 +330,11 @@
     "AudioControl5Visible": ["False"],
     "AudioControl6Visible": ["False"],
     "AudioControl7Visible": ["False"],
+    "AudioControl8Visible": ["False"],
+    "AudioControl9Visible": ["False"],
+    "AudioControl10Visible": ["False"],
+    "AudioControl11Visible": ["False"],
+    "AudioControl12Visible": ["False"],
 
     "MicControl1Visible": ["True"],
     "MicControl2Visible": ["True"],
@@ -337,6 +342,11 @@
     "MicControl4Visible": ["True"],
     "MicControl5Visible": ["True"],
     "MicControl6Visible": ["True"],
-    "MicControl7Visible": ["True"]
+    "MicControl7Visible": ["True"],
+    "MicControl8Visible": ["True"],
+    "MicControl9Visible": ["True"],
+    "MicControl10Visible": ["True"],
+    "MicControl11Visible": ["True"],
+    "MicControl12Visible": ["True"]
   }
 }
