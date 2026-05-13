@@ -95,11 +95,11 @@
     "AudioControlSideMenu4Name": ["Line"],
     "AudioControlSideMenu5Name": ["Line"],
 
-    "AudioControl1Name": ["Ctrl 1"],
+    "AudioControl1Name": ["Program"],
     "AudioControl2Name": ["Ctrl 2"],
     "AudioControl3Name": ["Ctrl 3"],
     "AudioControl4Name": ["Ctrl 4"],
-    "AudioControl5Name": ["Ctrl 5"],
+    "AudioControl5Name": ["Program"],
     "AudioControl6Name": ["Ctrl 6"],
     "AudioControl7Name": ["Ctrl 7"],
     "AudioControl8Name": ["Ctrl 8"],
