@@ -13,7 +13,7 @@ Hint=AudioLineControlHori (Smart Object ID=20)
 Code=11
 SGControlType=Subpage Reference List Vertical
 SGControlName=AudioLineControlHori
-GUID=EA9F4DBE-BBA5-4208-8541-3465ED0FCF8A
+GUID=F47859C3-A7C8-4FB8-A08B-8F1D8B793D6D
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]AudioLineControl_AudioLineControlHori.ced
 SMWRev=4.02.20
 Expand=expand_random

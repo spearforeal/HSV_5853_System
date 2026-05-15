@@ -13,7 +13,7 @@ Hint=LightingControlTopHeader (Smart Object ID=24)
 Code=17
 SGControlType=Subpage Reference List Horizontal
 SGControlName=LightingControlTopHeader
-GUID=658D1247-CDB6-4495-86F5-64AFCEE324E1
+GUID=A858FEFF-B13D-4BA6-9EB6-E3C0F056CF85
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingControlTopHeader.ced
 SMWRev=4.02.20
 Expand=expand_random

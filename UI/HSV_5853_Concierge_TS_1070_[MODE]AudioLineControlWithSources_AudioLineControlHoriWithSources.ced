@@ -13,7 +13,7 @@ Hint=AudioLineControlHoriWithSources (Smart Object ID=32)
 Code=24
 SGControlType=Subpage Reference List Vertical
 SGControlName=AudioLineControlHoriWithSources
-GUID=5BF58243-D569-4907-87B0-8BE1B3A41FDB
+GUID=E5FCAF32-D2A9-44A9-8B97-B28D314CF7F4
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]AudioLineControlWithSources_AudioLineControlHoriWithSources.ced
 SMWRev=4.02.20
 Expand=expand_random

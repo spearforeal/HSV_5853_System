@@ -13,7 +13,7 @@ Hint=RoutingDestList (Smart Object ID=5)
 Code=7
 SGControlType=Subpage Reference List Horizontal
 SGControlName=RoutingDestList
-GUID=532AC14D-40E2-4BC7-A2DA-977DA8DCB546
+GUID=F44EDAF6-D223-4C79-91A2-B3F88501608E
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Routing_RoutingDestList.ced
 SMWRev=4.02.20
 Expand=expand_random

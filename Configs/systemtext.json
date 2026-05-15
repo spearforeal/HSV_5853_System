@@ -16,6 +16,7 @@
     "SouthBanquetName": ["South Banquet"],
     "BanquetCombinedName": ["Combined Banquet"],
     "StartPageBGMButtonName": ["BGM"],
-    "BanquetRoomModeButtonName": ["Room Mode"]
+    "BanquetRoomModeButtonName": ["Room Mode"],
+    "LogOffButtonName": ["Log Off"]
   }
 }

@@ -4,13 +4,13 @@ Sgntr=SGD
 RelVrs=3
 VTProeVer=6.2.02
 Schema=1
-CRCGUID=A723637B-AB93-4E70-B0F6-5A00F48A5380
+CRCGUID=DDE0F05E-B048-4D84-A688-930DBB3F7F14
 ]
 ;================================================================================
 [
 ObjTp=Hd
 ProjectFile=HSV_5853_Concierge_TS_1070.vtp
-VtpGuid=3607FCFE-C640-467B-9C01-8C6EFFB9EA15
+VtpGuid=D781CEC9-3F7F-492D-887E-85E88D6F19CF
 ]
 ;================================================================================
 [
@@ -20,7 +20,7 @@ Hint=BGM Welcome btn (Smart Object ID=21)
 Code=1
 SGControlType=Subpage Reference List Vertical
 SGControlName=BGM Welcome btn
-GUID=C100BF42-B435-457E-A47E-7DAA219D969A
+GUID=B2F3B0CA-FFD0-41BB-8F3E-E00E519563A5
 SmplCName=HSV_5853_Concierge_TS_1070_Start_BGM Welcome btn.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -233,7 +233,7 @@ Hint=FooterBtn (Smart Object ID=11)
 Code=2
 SGControlType=Subpage Reference List Horizontal
 SGControlName=FooterBtn
-GUID=969B0023-9CB2-457F-8AC0-35A6BFE3D408
+GUID=F09D86DC-0480-499E-8053-2BAA1B4EF606
 SmplCName=HSV_5853_Concierge_TS_1070_Start_FooterBtn.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -446,7 +446,7 @@ Hint=ModeList (Smart Object ID=1)
 Code=3
 SGControlType=Subpage Reference List Vertical
 SGControlName=ModeList
-GUID=1C8067D8-7C9C-4783-863F-B52595572DFA
+GUID=9727B18D-DDA6-4605-803B-6A0CC9144A2C
 SmplCName=HSV_5853_Concierge_TS_1070_[SIDE]ModeList_ModeList.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -835,7 +835,7 @@ Hint=RoutingPageTitle (Smart Object ID=3)
 Code=4
 SGControlType=Subpage Reference List Horizontal
 SGControlName=RoutingPageTitle
-GUID=3AD6C571-7E9B-41D8-A67C-1C9F8A930E40
+GUID=563CCDD3-2556-45FB-A5FE-C582E8A3EB50
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Routing_RoutingPageTitle.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -1036,7 +1036,7 @@ Hint=RoutingSourceList (Smart Object ID=2)
 Code=5
 SGControlType=Subpage Reference List Horizontal
 SGControlName=RoutingSourceList
-GUID=87EB74FC-CCAA-402C-A787-8E721F993239
+GUID=2F420E86-986A-497A-9BA7-D66D965C08D9
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Routing_RoutingSourceList.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -1473,7 +1473,7 @@ Hint=RoutingClearBtn (Smart Object ID=4)
 Code=6
 SGControlType=Subpage Reference List Vertical
 SGControlName=RoutingClearBtn
-GUID=24639C9F-0186-428B-A8AA-1A770A4BA75F
+GUID=DCD6FAFC-D343-4684-9A3D-4C187A7B92E7
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Routing_RoutingClearBtn.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -1690,7 +1690,7 @@ Hint=RoutingDestList (Smart Object ID=5)
 Code=7
 SGControlType=Subpage Reference List Horizontal
 SGControlName=RoutingDestList
-GUID=532AC14D-40E2-4BC7-A2DA-977DA8DCB546
+GUID=F44EDAF6-D223-4C79-91A2-B3F88501608E
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Routing_RoutingDestList.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -2227,7 +2227,7 @@ Hint=SideMenu (Smart Object ID=6)
 Code=8
 SGControlType=Subpage Reference List Vertical
 SGControlName=SideMenu
-GUID=C1DADD99-25AD-421F-A094-90A761B05211
+GUID=D891FF23-798E-4FD7-B6E9-A25C7F3065EF
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]SideMenu_SideMenu.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -2616,7 +2616,7 @@ Hint=AudioControlPage1Title (Smart Object ID=7)
 Code=9
 SGControlType=Subpage Reference List Horizontal
 SGControlName=AudioControlPage1Title
-GUID=1363ABF5-BD6D-4A23-A86D-4B99A54E52D1
+GUID=C0C48FAE-3CA6-49D9-8157-A67185C13E62
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]AudioMicControl_AudioControlPage1Title.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -2817,7 +2817,7 @@ Hint=MicControlHori (Smart Object ID=9)
 Code=10
 SGControlType=Subpage Reference List Vertical
 SGControlName=MicControlHori
-GUID=313E30B8-392A-4899-8F05-1B98E1B0401A
+GUID=EBB2DC44-93FE-4937-89D4-5049458C1AD3
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]AudioMicControl_MicControlHori.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -3274,7 +3274,7 @@ Hint=AudioLineControlHori (Smart Object ID=20)
 Code=11
 SGControlType=Subpage Reference List Vertical
 SGControlName=AudioLineControlHori
-GUID=EA9F4DBE-BBA5-4208-8541-3465ED0FCF8A
+GUID=F47859C3-A7C8-4FB8-A08B-8F1D8B793D6D
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]AudioLineControl_AudioLineControlHori.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -3731,7 +3731,7 @@ Hint=Password Keypad (Smart Object ID=19)
 Code=12
 SGControlType=Simple Keypad
 SGControlName=Password Keypad
-GUID=73C5C8D5-B0AE-47D0-AE7A-AFDAA851DA5B
+GUID=B79FAAE8-A5C3-4DF8-8815-0D7B7D27BF2C
 SmplCName=HSV_5853_Concierge_TS_1070_Password_Password Keypad.ced
 SMWRev=4.02.19
 Expand=expand_random
@@ -3836,7 +3836,7 @@ Hint=RoomModeSelectList (Smart Object ID=49)
 Code=13
 SGControlType=Subpage Reference List Horizontal
 SGControlName=RoomModeSelectList
-GUID=0BEB5B32-EE11-4F9F-B261-4416E6741758
+GUID=F5A1700F-512F-4FE8-99A0-FC48D6CDC16F
 SmplCName=HSV_5853_Concierge_TS_1070_[SYS]RoomMode_RoomModeSelectList.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -4057,7 +4057,7 @@ Hint=LightingPageTitle (Smart Object ID=22)
 Code=14
 SGControlType=Subpage Reference List Horizontal
 SGControlName=LightingPageTitle
-GUID=C6A28EC0-F28E-4AE4-A7C6-BB51B81706C9
+GUID=4911CA4F-9BEA-4669-BF02-E31D81C727AB
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingPageTitle.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -4258,7 +4258,7 @@ Hint=LightingTopPresets (Smart Object ID=23)
 Code=15
 SGControlType=Subpage Reference List Horizontal
 SGControlName=LightingTopPresets
-GUID=DEB7553E-B87A-4DF1-A076-0EFED97A87AE
+GUID=B9383FBB-C67A-480D-8CDC-4378300F949B
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingTopPresets.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -4583,7 +4583,7 @@ Hint=LightingBottomPresets (Smart Object ID=25)
 Code=16
 SGControlType=Subpage Reference List Horizontal
 SGControlName=LightingBottomPresets
-GUID=83AD972E-405A-4C47-974C-88E375A6E42F
+GUID=AF05B409-49FE-4631-AA66-F5E3CD14B387
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingBottomPresets.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -4908,7 +4908,7 @@ Hint=LightingControlTopHeader (Smart Object ID=24)
 Code=17
 SGControlType=Subpage Reference List Horizontal
 SGControlName=LightingControlTopHeader
-GUID=658D1247-CDB6-4495-86F5-64AFCEE324E1
+GUID=A858FEFF-B13D-4BA6-9EB6-E3C0F056CF85
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingControlTopHeader.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -5109,7 +5109,7 @@ Hint=LightingControlBottomHeader (Smart Object ID=26)
 Code=18
 SGControlType=Subpage Reference List Horizontal
 SGControlName=LightingControlBottomHeader
-GUID=903CFC28-25F8-499C-8610-27DCA1AEB3D8
+GUID=753CD977-0EB0-47E0-B43F-6471AD0A0F6E
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingControlBottomHeader.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -5310,7 +5310,7 @@ Hint=ShadePageTitle (Smart Object ID=27)
 Code=19
 SGControlType=Subpage Reference List Horizontal
 SGControlName=ShadePageTitle
-GUID=AFD716DB-1EA1-4463-9227-C541D6590558
+GUID=2343181D-442A-4BD6-B8D4-A6C01DD62256
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadePageTitle.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -5511,7 +5511,7 @@ Hint=ShadeTopPresets (Smart Object ID=29)
 Code=20
 SGControlType=Subpage Reference List Horizontal
 SGControlName=ShadeTopPresets
-GUID=31EA30C3-FE04-4552-96D5-935AB143EAC0
+GUID=585F0D4B-5274-4E9B-8CE7-276E641B6F09
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeTopPresets.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -5836,7 +5836,7 @@ Hint=ShadeBottomPresets (Smart Object ID=31)
 Code=21
 SGControlType=Subpage Reference List Horizontal
 SGControlName=ShadeBottomPresets
-GUID=6F9FA0AF-84A2-444E-98C4-842A22D9B80A
+GUID=8EBA1AF2-B998-4D29-B023-C0AE890C3EF8
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeBottomPresets.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -6161,7 +6161,7 @@ Hint=ShadeControlTopHeader (Smart Object ID=28)
 Code=22
 SGControlType=Subpage Reference List Horizontal
 SGControlName=ShadeControlTopHeader
-GUID=C7B1E5EC-827B-495B-800F-BEB316FE3D51
+GUID=C36DEEEB-1F37-44D9-AEE5-F96A64DF7765
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeControlTopHeader.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -6362,7 +6362,7 @@ Hint=ShadeControlBottomHeader (Smart Object ID=30)
 Code=23
 SGControlType=Subpage Reference List Horizontal
 SGControlName=ShadeControlBottomHeader
-GUID=0EF78D75-B550-4635-8916-CCCFB127294A
+GUID=F95B244E-37D5-4574-A43E-2EAA60274D72
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeControlBottomHeader.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -6563,7 +6563,7 @@ Hint=AudioLineControlHoriWithSources (Smart Object ID=32)
 Code=24
 SGControlType=Subpage Reference List Vertical
 SGControlName=AudioLineControlHoriWithSources
-GUID=5BF58243-D569-4907-87B0-8BE1B3A41FDB
+GUID=E5FCAF32-D2A9-44A9-8B97-B28D314CF7F4
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]AudioLineControlWithSources_AudioLineControlHoriWithSources.ced
 SMWRev=4.02.20
 Expand=expand_random
