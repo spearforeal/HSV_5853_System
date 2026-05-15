@@ -76,7 +76,7 @@
     "SideMenu11Visible": ["False"],
     "SideMenu12Visible": ["False"]
   },
-  "Dining": {
+  "dining": {
     "AudioCtrl1Name": ["Program"],
     "AudioCtrl2Name": ["Speakers"],
     "AudioCtrl3Name": [""],
@@ -105,7 +105,7 @@
     "AudioCtrl8SrcVisible": ["False"]
   },
 
-  "R&B": {
+  "r&b": {
     "AudioCtrl1Name": ["Program"],
     "AudioCtrl2Name": ["Zone 1"],
     "AudioCtrl3Name": ["Zone 2"],
