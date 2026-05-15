@@ -103,5 +103,34 @@
     "AudioCtrl6SrcVisible": ["False"],
     "AudioCtrl7SrcVisible": ["False"],
     "AudioCtrl8SrcVisible": ["False"]
+  },
+
+  "R&B": {
+    "AudioCtrl1Name": ["Program"],
+    "AudioCtrl2Name": ["Zone 1"],
+    "AudioCtrl3Name": ["Zone 2"],
+    "AudioCtrl4Name": ["Zone 3"],
+    "AudioCtrl5Name": ["Zone 4"],
+    "AudioCtrl6Name": [""],
+    "AudioCtrl7Name": [""],
+    "AudioCtrl8Name": [""],
+
+    "AudioCtrl1Visible": ["True"],
+    "AudioCtrl2Visible": ["True"],
+    "AudioCtrl3Visible": ["True"],
+    "AudioCtrl4Visible": ["True"],
+    "AudioCtrl5Visible": ["True"],
+    "AudioCtrl6Visible": ["False"],
+    "AudioCtrl7Visible": ["False"],
+    "AudioCtrl8Visible": ["False"],
+
+    "AudioCtrl1SrcVisible": ["True"],
+    "AudioCtrl2SrcVisible": ["False"],
+    "AudioCtrl3SrcVisible": ["False"],
+    "AudioCtrl4SrcVisible": ["False"],
+    "AudioCtrl5SrcVisible": ["False"],
+    "AudioCtrl6SrcVisible": ["False"],
+    "AudioCtrl7SrcVisible": ["False"],
+    "AudioCtrl8SrcVisible": ["False"]
   }
 }
