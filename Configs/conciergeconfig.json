@@ -61,6 +61,19 @@
     "SideMenu9Name": ["Line"],
     "SideMenu10Name": ["Line"],
     "SideMenu11Name": ["Line"],
-    "SideMenu12Name": ["Line"]
+    "SideMenu12Name": ["Line"],
+
+    "SideMenu1Visible": ["True"],
+    "SideMenu2Visible": ["True"],
+    "SideMenu3Visible": ["True"],
+    "SideMenu4Visible": ["True"],
+    "SideMenu5Visible": ["True"],
+    "SideMenu6Visible": ["True"],
+    "SideMenu7Visible": ["True"],
+    "SideMenu8Visible": ["True"],
+    "SideMenu9Visible": ["False"],
+    "SideMenu10Visible": ["False"],
+    "SideMenu11Visible": ["False"],
+    "SideMenu12Visible": ["False"]
   }
 }
