@@ -17,6 +17,7 @@
     "BanquetCombinedName": ["Combined Banquet"],
     "StartPageBGMButtonName": ["BGM"],
     "BanquetRoomModeButtonName": ["Room Mode"],
-    "LogOffButtonName": ["Log Off"]
+    "LogOffButtonName": ["Log Off"],
+    "ConciergeName": ["Concierge"]
   }
 }
