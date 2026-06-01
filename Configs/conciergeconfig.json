@@ -132,5 +132,33 @@
     "AudioCtrl6SrcVisible": ["False"],
     "AudioCtrl7SrcVisible": ["False"],
     "AudioCtrl8SrcVisible": ["False"]
+  },
+  "adventure": {
+    "AudioCtrl1Name": ["Program"],
+    "AudioCtrl2Name": ["Speakers"],
+    "AudioCtrl3Name": [""],
+    "AudioCtrl4Name": [""],
+    "AudioCtrl5Name": [""],
+    "AudioCtrl6Name": [""],
+    "AudioCtrl7Name": [""],
+    "AudioCtrl8Name": [""],
+
+    "AudioCtrl1Visible": ["True"],
+    "AudioCtrl2Visible": ["True"],
+    "AudioCtrl3Visible": ["False"],
+    "AudioCtrl4Visible": ["False"],
+    "AudioCtrl5Visible": ["False"],
+    "AudioCtrl6Visible": ["False"],
+    "AudioCtrl7Visible": ["False"],
+    "AudioCtrl8Visible": ["False"],
+
+    "AudioCtrl1SrcVisible": ["True"],
+    "AudioCtrl2SrcVisible": ["False"],
+    "AudioCtrl3SrcVisible": ["False"],
+    "AudioCtrl4SrcVisible": ["False"],
+    "AudioCtrl5SrcVisible": ["False"],
+    "AudioCtrl6SrcVisible": ["False"],
+    "AudioCtrl7SrcVisible": ["False"],
+    "AudioCtrl8SrcVisible": ["False"]
   }
 }
