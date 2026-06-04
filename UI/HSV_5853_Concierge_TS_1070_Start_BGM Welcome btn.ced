@@ -13,7 +13,7 @@ Hint=BGM Welcome btn (Smart Object ID=21)
 Code=1
 SGControlType=Subpage Reference List Vertical
 SGControlName=BGM Welcome btn
-GUID=B2F3B0CA-FFD0-41BB-8F3E-E00E519563A5
+GUID=D33E26BE-7698-48A7-AE3E-5CA337B6EC29
 SmplCName=HSV_5853_Concierge_TS_1070_Start_BGM Welcome btn.ced
 SMWRev=4.02.20
 Expand=expand_random

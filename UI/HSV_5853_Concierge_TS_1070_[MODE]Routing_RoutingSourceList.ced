@@ -13,7 +13,7 @@ Hint=RoutingSourceList (Smart Object ID=2)
 Code=5
 SGControlType=Subpage Reference List Horizontal
 SGControlName=RoutingSourceList
-GUID=2F420E86-986A-497A-9BA7-D66D965C08D9
+GUID=095AC65A-BFD4-4A41-A2B0-A38DEAE21C5A
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Routing_RoutingSourceList.ced
 SMWRev=4.02.20
 Expand=expand_random

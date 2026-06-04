@@ -10,10 +10,10 @@ VTProeVer=6.2.02
 ObjTp=Symbol
 Name=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeControlBottomHeader.ced
 Hint=ShadeControlBottomHeader (Smart Object ID=30)
-Code=23
+Code=21
 SGControlType=Subpage Reference List Horizontal
 SGControlName=ShadeControlBottomHeader
-GUID=F95B244E-37D5-4574-A43E-2EAA60274D72
+GUID=D9445BBF-0932-4FB7-BF5C-1E8E8DB7F133
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeControlBottomHeader.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -180,14 +180,14 @@ OutputList3SigType13=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=23
-CedH=23
+Pp1=21
+CedH=21
 SmartObjId=30d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=23
+H=21
 Tp=1
 HD=TRUE
 DV=30d
@@ -200,7 +200,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=23
+H=21
 Name=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeControlBottomHeader.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.

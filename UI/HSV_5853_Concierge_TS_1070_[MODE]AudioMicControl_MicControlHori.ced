@@ -13,7 +13,7 @@ Hint=MicControlHori (Smart Object ID=9)
 Code=10
 SGControlType=Subpage Reference List Vertical
 SGControlName=MicControlHori
-GUID=EBB2DC44-93FE-4937-89D4-5049458C1AD3
+GUID=431D37B1-8C6E-474D-9A84-519DB5C716F3
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]AudioMicControl_MicControlHori.ced
 SMWRev=4.02.20
 Expand=expand_random

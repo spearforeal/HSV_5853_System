@@ -10,10 +10,10 @@ VTProeVer=6.2.02
 ObjTp=Symbol
 Name=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingControlTopHeader.ced
 Hint=LightingControlTopHeader (Smart Object ID=24)
-Code=17
+Code=16
 SGControlType=Subpage Reference List Horizontal
 SGControlName=LightingControlTopHeader
-GUID=A858FEFF-B13D-4BA6-9EB6-E3C0F056CF85
+GUID=76747AA4-7B3E-436F-A6A6-D706C9A1D2BD
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingControlTopHeader.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -180,14 +180,14 @@ OutputList3SigType13=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=17
-CedH=17
+Pp1=16
+CedH=16
 SmartObjId=24d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=17
+H=16
 Tp=1
 HD=TRUE
 DV=24d
@@ -200,7 +200,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=17
+H=16
 Name=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingControlTopHeader.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.

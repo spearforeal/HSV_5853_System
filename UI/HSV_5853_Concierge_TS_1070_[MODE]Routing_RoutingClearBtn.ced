@@ -13,7 +13,7 @@ Hint=RoutingClearBtn (Smart Object ID=4)
 Code=6
 SGControlType=Subpage Reference List Vertical
 SGControlName=RoutingClearBtn
-GUID=DCD6FAFC-D343-4684-9A3D-4C187A7B92E7
+GUID=B3848520-64CA-4614-A876-2D1E6DE07FCE
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Routing_RoutingClearBtn.ced
 SMWRev=4.02.20
 Expand=expand_random

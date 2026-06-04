@@ -4,13 +4,13 @@ Sgntr=SGD
 RelVrs=3
 VTProeVer=6.2.02
 Schema=1
-CRCGUID=DDE0F05E-B048-4D84-A688-930DBB3F7F14
+CRCGUID=0581E99F-C888-4E5D-8A67-2B1B35BD2342
 ]
 ;================================================================================
 [
 ObjTp=Hd
 ProjectFile=HSV_5853_Concierge_TS_1070.vtp
-VtpGuid=D781CEC9-3F7F-492D-887E-85E88D6F19CF
+VtpGuid=9C9DFD68-B258-4ADE-A67C-80ABAF2EF71D
 ]
 ;================================================================================
 [
@@ -20,7 +20,7 @@ Hint=BGM Welcome btn (Smart Object ID=21)
 Code=1
 SGControlType=Subpage Reference List Vertical
 SGControlName=BGM Welcome btn
-GUID=B2F3B0CA-FFD0-41BB-8F3E-E00E519563A5
+GUID=D33E26BE-7698-48A7-AE3E-5CA337B6EC29
 SmplCName=HSV_5853_Concierge_TS_1070_Start_BGM Welcome btn.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -233,7 +233,7 @@ Hint=FooterBtn (Smart Object ID=11)
 Code=2
 SGControlType=Subpage Reference List Horizontal
 SGControlName=FooterBtn
-GUID=F09D86DC-0480-499E-8053-2BAA1B4EF606
+GUID=3E1667A7-1438-4B4A-BBCD-6C7B9BA19D57
 SmplCName=HSV_5853_Concierge_TS_1070_Start_FooterBtn.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -446,7 +446,7 @@ Hint=ModeList (Smart Object ID=1)
 Code=3
 SGControlType=Subpage Reference List Vertical
 SGControlName=ModeList
-GUID=9727B18D-DDA6-4605-803B-6A0CC9144A2C
+GUID=0A3E20CA-0B83-4552-BA9C-D2E95CB65387
 SmplCName=HSV_5853_Concierge_TS_1070_[SIDE]ModeList_ModeList.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -835,7 +835,7 @@ Hint=RoutingPageTitle (Smart Object ID=3)
 Code=4
 SGControlType=Subpage Reference List Horizontal
 SGControlName=RoutingPageTitle
-GUID=563CCDD3-2556-45FB-A5FE-C582E8A3EB50
+GUID=0699FA83-A9CE-4F3C-82C1-5A617C5A12F0
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Routing_RoutingPageTitle.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -1036,7 +1036,7 @@ Hint=RoutingSourceList (Smart Object ID=2)
 Code=5
 SGControlType=Subpage Reference List Horizontal
 SGControlName=RoutingSourceList
-GUID=2F420E86-986A-497A-9BA7-D66D965C08D9
+GUID=095AC65A-BFD4-4A41-A2B0-A38DEAE21C5A
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Routing_RoutingSourceList.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -1473,7 +1473,7 @@ Hint=RoutingClearBtn (Smart Object ID=4)
 Code=6
 SGControlType=Subpage Reference List Vertical
 SGControlName=RoutingClearBtn
-GUID=DCD6FAFC-D343-4684-9A3D-4C187A7B92E7
+GUID=B3848520-64CA-4614-A876-2D1E6DE07FCE
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Routing_RoutingClearBtn.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -1690,7 +1690,7 @@ Hint=RoutingDestList (Smart Object ID=5)
 Code=7
 SGControlType=Subpage Reference List Horizontal
 SGControlName=RoutingDestList
-GUID=F44EDAF6-D223-4C79-91A2-B3F88501608E
+GUID=58AB7C37-714B-440F-BEFB-F18DBE3E2CB3
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Routing_RoutingDestList.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -2227,7 +2227,7 @@ Hint=SideMenu (Smart Object ID=6)
 Code=8
 SGControlType=Subpage Reference List Vertical
 SGControlName=SideMenu
-GUID=D891FF23-798E-4FD7-B6E9-A25C7F3065EF
+GUID=E6F91468-C9C9-4F4E-BC85-FB1813CE4CFB
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]SideMenu_SideMenu.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -2616,7 +2616,7 @@ Hint=AudioControlPage1Title (Smart Object ID=7)
 Code=9
 SGControlType=Subpage Reference List Horizontal
 SGControlName=AudioControlPage1Title
-GUID=C0C48FAE-3CA6-49D9-8157-A67185C13E62
+GUID=4E5839F0-E859-4A66-A247-601AEA0C8C48
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]AudioMicControl_AudioControlPage1Title.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -2817,7 +2817,7 @@ Hint=MicControlHori (Smart Object ID=9)
 Code=10
 SGControlType=Subpage Reference List Vertical
 SGControlName=MicControlHori
-GUID=EBB2DC44-93FE-4937-89D4-5049458C1AD3
+GUID=431D37B1-8C6E-474D-9A84-519DB5C716F3
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]AudioMicControl_MicControlHori.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -3274,7 +3274,7 @@ Hint=AudioLineControlHori (Smart Object ID=20)
 Code=11
 SGControlType=Subpage Reference List Vertical
 SGControlName=AudioLineControlHori
-GUID=F47859C3-A7C8-4FB8-A08B-8F1D8B793D6D
+GUID=0676D33E-E575-4741-9969-B446CB8DB952
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]AudioLineControl_AudioLineControlHori.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -3731,7 +3731,7 @@ Hint=Password Keypad (Smart Object ID=19)
 Code=12
 SGControlType=Simple Keypad
 SGControlName=Password Keypad
-GUID=B79FAAE8-A5C3-4DF8-8815-0D7B7D27BF2C
+GUID=60E9CA43-390A-4FC3-AD68-72A2BCD64526
 SmplCName=HSV_5853_Concierge_TS_1070_Password_Password Keypad.ced
 SMWRev=4.02.19
 Expand=expand_random
@@ -3836,7 +3836,7 @@ Hint=RoomModeSelectList (Smart Object ID=49)
 Code=13
 SGControlType=Subpage Reference List Horizontal
 SGControlName=RoomModeSelectList
-GUID=F5A1700F-512F-4FE8-99A0-FC48D6CDC16F
+GUID=3224AED8-72A7-421B-8CB2-BD7F6AB2380E
 SmplCName=HSV_5853_Concierge_TS_1070_[SYS]RoomMode_RoomModeSelectList.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -4057,7 +4057,7 @@ Hint=LightingPageTitle (Smart Object ID=22)
 Code=14
 SGControlType=Subpage Reference List Horizontal
 SGControlName=LightingPageTitle
-GUID=4911CA4F-9BEA-4669-BF02-E31D81C727AB
+GUID=2FC67E93-68C4-4D92-8D51-6729755C1ABC
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingPageTitle.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -4258,7 +4258,7 @@ Hint=LightingTopPresets (Smart Object ID=23)
 Code=15
 SGControlType=Subpage Reference List Horizontal
 SGControlName=LightingTopPresets
-GUID=B9383FBB-C67A-480D-8CDC-4378300F949B
+GUID=B53050C6-878A-46DC-8CF8-844C7AC6C971
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingTopPresets.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -4578,31 +4578,31 @@ CedVer=1
 ;================================================================================
 [
 ObjTp=Symbol
-Name=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingBottomPresets.ced
-Hint=LightingBottomPresets (Smart Object ID=25)
+Name=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingControlTopHeader.ced
+Hint=LightingControlTopHeader (Smart Object ID=24)
 Code=16
 SGControlType=Subpage Reference List Horizontal
-SGControlName=LightingBottomPresets
-GUID=AF05B409-49FE-4631-AA66-F5E3CD14B387
-SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingBottomPresets.ced
+SGControlName=LightingControlTopHeader
+GUID=76747AA4-7B3E-436F-A6A6-D706C9A1D2BD
+SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingControlTopHeader.ced
 SMWRev=4.02.20
 Expand=expand_random
 HelpID=10124
 Render=8
 ;Define the number of inputs, outputs and parameters
-MinVariableInputs=4024
-MaxVariableInputs=4024
-MinVariableOutputs=4024
-MaxVariableOutputs=4024
+MinVariableInputs=4014
+MaxVariableInputs=4014
+MinVariableOutputs=4014
+MaxVariableOutputs=4014
 NumFixedParams=1
 MinVariableInputsList2=3
 MaxVariableInputsList2=3
 MinVariableOutputsList2=3
 MaxVariableOutputsList2=3
-MinVariableInputsList3=20
-MaxVariableInputsList3=20
-MinVariableOutputsList3=20
-MaxVariableOutputsList3=20
+MinVariableInputsList3=13
+MaxVariableInputsList3=13
+MinVariableOutputsList3=13
+MaxVariableOutputsList3=13
 InputSigType1=Digital
 OutputSigType1=Digital
 InputList2SigType1=Analog
@@ -4635,66 +4635,18 @@ InputCue11=[~BeginGroup~]Enable
 InputSigType11=Digital
 InputCue12=Item 1 Enable
 InputSigType12=Digital
-InputCue13=Item 2 Enable
-InputSigType13=Digital
-InputCue14=Item 3 Enable
-InputSigType14=Digital
-InputCue15=Item 4 Enable
-InputSigType15=Digital
-InputCue16=Item 5 Enable
-InputSigType16=Digital
-InputCue17=Item 6 Enable
-InputSigType17=Digital
-InputCue18=Item 7 Enable
-InputSigType18=Digital
-InputCue19=Item 8 Enable
-InputSigType19=Digital
-InputCue20=[~UNUSED2~]
-InputSigType20=Digital|Analog|Serial|String
+InputCue13=[~UNUSED2~]
+InputSigType13=Digital|Analog|Serial|String
 InputCue2012=[~EndGroup~]Enable
 InputSigType2012=Digital
 InputCue2013=[~BeginGroup~]Visible
 InputSigType2013=Digital
 InputCue2014=Item 1 Visible
 InputSigType2014=Digital
-InputCue2015=Item 2 Visible
-InputSigType2015=Digital
-InputCue2016=Item 3 Visible
-InputSigType2016=Digital
-InputCue2017=Item 4 Visible
-InputSigType2017=Digital
-InputCue2018=Item 5 Visible
-InputSigType2018=Digital
-InputCue2019=Item 6 Visible
-InputSigType2019=Digital
-InputCue2020=Item 7 Visible
-InputSigType2020=Digital
-InputCue2021=Item 8 Visible
-InputSigType2021=Digital
-InputCue2022=[~UNUSED2~]
-InputSigType2022=Digital|Analog|Serial|String
+InputCue2015=[~UNUSED2~]
+InputSigType2015=Digital|Analog|Serial|String
 InputCue4014=[~EndGroup~]Visible
 InputSigType4014=Digital
-InputCue4015=[~BeginGroup~]fb
-InputSigType4015=Digital
-InputCue4016=fb1
-InputSigType4016=Digital
-InputCue4017=fb2
-InputSigType4017=Digital
-InputCue4018=fb3
-InputSigType4018=Digital
-InputCue4019=fb4
-InputSigType4019=Digital
-InputCue4020=fb5
-InputSigType4020=Digital
-InputCue4021=fb6
-InputSigType4021=Digital
-InputCue4022=fb7
-InputSigType4022=Digital
-InputCue4023=fb8
-InputSigType4023=Digital
-InputCue4024=[~EndGroup~]fb
-InputSigType4024=Digital
 OutputCue1=Is Moving
 OutputSigType1=Digital
 OutputCue2=[~UNUSED2~]
@@ -4719,66 +4671,18 @@ OutputCue11=[~BeginGroup~]Enable
 OutputSigType11=Digital
 OutputCue12=[~UNUSED3~]
 OutputSigType12=Digital
-OutputCue13=[~UNUSED3~]
-OutputSigType13=Digital
-OutputCue14=[~UNUSED3~]
-OutputSigType14=Digital
-OutputCue15=[~UNUSED3~]
-OutputSigType15=Digital
-OutputCue16=[~UNUSED3~]
-OutputSigType16=Digital
-OutputCue17=[~UNUSED3~]
-OutputSigType17=Digital
-OutputCue18=[~UNUSED3~]
-OutputSigType18=Digital
-OutputCue19=[~UNUSED3~]
-OutputSigType19=Digital
-OutputCue20=[~UNUSED2~]
-OutputSigType20=Digital|Analog|Serial|String
+OutputCue13=[~UNUSED2~]
+OutputSigType13=Digital|Analog|Serial|String
 OutputCue2012=[~EndGroup~]Enable
 OutputSigType2012=Digital
 OutputCue2013=[~BeginGroup~]Visible
 OutputSigType2013=Digital
 OutputCue2014=[~UNUSED3~]
 OutputSigType2014=Digital
-OutputCue2015=[~UNUSED3~]
-OutputSigType2015=Digital
-OutputCue2016=[~UNUSED3~]
-OutputSigType2016=Digital
-OutputCue2017=[~UNUSED3~]
-OutputSigType2017=Digital
-OutputCue2018=[~UNUSED3~]
-OutputSigType2018=Digital
-OutputCue2019=[~UNUSED3~]
-OutputSigType2019=Digital
-OutputCue2020=[~UNUSED3~]
-OutputSigType2020=Digital
-OutputCue2021=[~UNUSED3~]
-OutputSigType2021=Digital
-OutputCue2022=[~UNUSED2~]
-OutputSigType2022=Digital|Analog|Serial|String
+OutputCue2015=[~UNUSED2~]
+OutputSigType2015=Digital|Analog|Serial|String
 OutputCue4014=[~EndGroup~]Visible
 OutputSigType4014=Digital
-OutputCue4015=[~BeginGroup~]Press
-OutputSigType4015=Digital
-OutputCue4016=press1
-OutputSigType4016=Digital
-OutputCue4017=press2
-OutputSigType4017=Digital
-OutputCue4018=press3
-OutputSigType4018=Digital
-OutputCue4019=press4
-OutputSigType4019=Digital
-OutputCue4020=press5
-OutputSigType4020=Digital
-OutputCue4021=press6
-OutputSigType4021=Digital
-OutputCue4022=press7
-OutputSigType4022=Digital
-OutputCue4023=press8
-OutputSigType4023=Digital
-OutputCue4024=[~EndGroup~]Press
-OutputSigType4024=Digital
 InputList2Cue1=[~UNUSED3~]
 InputList2SigType1=Analog
 InputList2Cue2=Scroll To Item
@@ -4815,22 +4719,8 @@ InputList3Cue11=[~BeginGroup~]text-o
 InputList3SigType11=Serial
 InputList3Cue12=text-o1
 InputList3SigType12=Serial
-InputList3Cue13=text-o2
+InputList3Cue13=[~EndGroup~]text-o
 InputList3SigType13=Serial
-InputList3Cue14=text-o3
-InputList3SigType14=Serial
-InputList3Cue15=text-o4
-InputList3SigType15=Serial
-InputList3Cue16=text-o5
-InputList3SigType16=Serial
-InputList3Cue17=text-o6
-InputList3SigType17=Serial
-InputList3Cue18=text-o7
-InputList3SigType18=Serial
-InputList3Cue19=text-o8
-InputList3SigType19=Serial
-InputList3Cue20=[~EndGroup~]text-o
-InputList3SigType20=Serial
 OutputList3Cue1=[~UNUSED2~]
 OutputList3SigType1=Serial
 OutputList3Cue2=[~UNUSED2~]
@@ -4855,28 +4745,14 @@ OutputList3Cue11=[~BeginGroup~]text-i
 OutputList3SigType11=Serial
 OutputList3Cue12=text-i1
 OutputList3SigType12=Serial
-OutputList3Cue13=text-i2
+OutputList3Cue13=[~EndGroup~]text-i
 OutputList3SigType13=Serial
-OutputList3Cue14=text-i3
-OutputList3SigType14=Serial
-OutputList3Cue15=text-i4
-OutputList3SigType15=Serial
-OutputList3Cue16=text-i5
-OutputList3SigType16=Serial
-OutputList3Cue17=text-i6
-OutputList3SigType17=Serial
-OutputList3Cue18=text-i7
-OutputList3SigType18=Serial
-OutputList3Cue19=text-i8
-OutputList3SigType19=Serial
-OutputList3Cue20=[~EndGroup~]text-i
-OutputList3SigType20=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
 Pp1=16
 CedH=16
-SmartObjId=25d
+SmartObjId=24d
 ]
 ; Parameter Properties for Smart Object ID
 [
@@ -4884,7 +4760,7 @@ ObjTp=Dp
 H=16
 Tp=1
 HD=TRUE
-DV=25d
+DV=24d
 NF=1
 DNF=1
 EncFmt=0
@@ -4895,7 +4771,7 @@ Sgn=0
 [
 ObjTp=CED
 H=16
-Name=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingBottomPresets.ced
+Name=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingControlTopHeader.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
 CedVer=1
@@ -4903,13 +4779,13 @@ CedVer=1
 ;================================================================================
 [
 ObjTp=Symbol
-Name=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingControlTopHeader.ced
-Hint=LightingControlTopHeader (Smart Object ID=24)
+Name=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadePageTitle.ced
+Hint=ShadePageTitle (Smart Object ID=27)
 Code=17
 SGControlType=Subpage Reference List Horizontal
-SGControlName=LightingControlTopHeader
-GUID=A858FEFF-B13D-4BA6-9EB6-E3C0F056CF85
-SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingControlTopHeader.ced
+SGControlName=ShadePageTitle
+GUID=35A86CAC-812F-4DA0-9251-7066E3926BE9
+SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadePageTitle.ced
 SMWRev=4.02.20
 Expand=expand_random
 HelpID=10124
@@ -5077,414 +4953,12 @@ ParamSigType1=Constant
 MPp=1
 Pp1=17
 CedH=17
-SmartObjId=24d
-]
-; Parameter Properties for Smart Object ID
-[
-ObjTp=Dp
-H=17
-Tp=1
-HD=TRUE
-DV=24d
-NF=1
-DNF=1
-EncFmt=0
-DVLF=1
-Sgn=0
-]
-; Smart Objects Definition section
-[
-ObjTp=CED
-H=17
-Name=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingControlTopHeader.ced
-;Cedver is the version of the Smart Graphics control, not the CED file format.
-;If the control definition changes, increment this.
-CedVer=1
-]
-;================================================================================
-[
-ObjTp=Symbol
-Name=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingControlBottomHeader.ced
-Hint=LightingControlBottomHeader (Smart Object ID=26)
-Code=18
-SGControlType=Subpage Reference List Horizontal
-SGControlName=LightingControlBottomHeader
-GUID=753CD977-0EB0-47E0-B43F-6471AD0A0F6E
-SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingControlBottomHeader.ced
-SMWRev=4.02.20
-Expand=expand_random
-HelpID=10124
-Render=8
-;Define the number of inputs, outputs and parameters
-MinVariableInputs=4014
-MaxVariableInputs=4014
-MinVariableOutputs=4014
-MaxVariableOutputs=4014
-NumFixedParams=1
-MinVariableInputsList2=3
-MaxVariableInputsList2=3
-MinVariableOutputsList2=3
-MaxVariableOutputsList2=3
-MinVariableInputsList3=13
-MaxVariableInputsList3=13
-MinVariableOutputsList3=13
-MaxVariableOutputsList3=13
-InputSigType1=Digital
-OutputSigType1=Digital
-InputList2SigType1=Analog
-OutputList2SigType1=Analog
-InputList3SigType1=Serial
-OutputList3SigType1=Serial
-
-;Define the cues, and signal types  each input, output and parameter.
-InputCue1=[~UNUSED3~]
-InputSigType1=Digital
-InputCue2=[~UNUSED2~]
-InputSigType2=Digital
-InputCue3=[~UNUSED2~]
-InputSigType3=Digital
-InputCue4=[~UNUSED2~]
-InputSigType4=Digital
-InputCue5=[~UNUSED2~]
-InputSigType5=Digital
-InputCue6=[~UNUSED2~]
-InputSigType6=Digital
-InputCue7=[~UNUSED2~]
-InputSigType7=Digital
-InputCue8=[~UNUSED2~]
-InputSigType8=Digital
-InputCue9=[~UNUSED2~]
-InputSigType9=Digital
-InputCue10=[~UNUSED2~]
-InputSigType10=Digital
-InputCue11=[~BeginGroup~]Enable
-InputSigType11=Digital
-InputCue12=Item 1 Enable
-InputSigType12=Digital
-InputCue13=[~UNUSED2~]
-InputSigType13=Digital|Analog|Serial|String
-InputCue2012=[~EndGroup~]Enable
-InputSigType2012=Digital
-InputCue2013=[~BeginGroup~]Visible
-InputSigType2013=Digital
-InputCue2014=Item 1 Visible
-InputSigType2014=Digital
-InputCue2015=[~UNUSED2~]
-InputSigType2015=Digital|Analog|Serial|String
-InputCue4014=[~EndGroup~]Visible
-InputSigType4014=Digital
-OutputCue1=Is Moving
-OutputSigType1=Digital
-OutputCue2=[~UNUSED2~]
-OutputSigType2=Digital
-OutputCue3=[~UNUSED2~]
-OutputSigType3=Digital
-OutputCue4=[~UNUSED2~]
-OutputSigType4=Digital
-OutputCue5=[~UNUSED2~]
-OutputSigType5=Digital
-OutputCue6=[~UNUSED2~]
-OutputSigType6=Digital
-OutputCue7=[~UNUSED2~]
-OutputSigType7=Digital
-OutputCue8=[~UNUSED2~]
-OutputSigType8=Digital
-OutputCue9=[~UNUSED2~]
-OutputSigType9=Digital
-OutputCue10=[~UNUSED2~]
-OutputSigType10=Digital
-OutputCue11=[~BeginGroup~]Enable
-OutputSigType11=Digital
-OutputCue12=[~UNUSED3~]
-OutputSigType12=Digital
-OutputCue13=[~UNUSED2~]
-OutputSigType13=Digital|Analog|Serial|String
-OutputCue2012=[~EndGroup~]Enable
-OutputSigType2012=Digital
-OutputCue2013=[~BeginGroup~]Visible
-OutputSigType2013=Digital
-OutputCue2014=[~UNUSED3~]
-OutputSigType2014=Digital
-OutputCue2015=[~UNUSED2~]
-OutputSigType2015=Digital|Analog|Serial|String
-OutputCue4014=[~EndGroup~]Visible
-OutputSigType4014=Digital
-InputList2Cue1=[~UNUSED3~]
-InputList2SigType1=Analog
-InputList2Cue2=Scroll To Item
-InputList2SigType2=Analog
-InputList2Cue3=Set Number of Items
-InputList2SigType3=Analog
-OutputList2Cue1=Item Clicked
-OutputList2SigType1=Analog
-OutputList2Cue2=[~UNUSED3~]
-OutputList2SigType2=Analog
-OutputList2Cue3=[~UNUSED3~]
-OutputList2SigType3=Analog
-InputList3Cue1=[~UNUSED2~]
-InputList3SigType1=Serial
-InputList3Cue2=[~UNUSED2~]
-InputList3SigType2=Serial
-InputList3Cue3=[~UNUSED2~]
-InputList3SigType3=Serial
-InputList3Cue4=[~UNUSED2~]
-InputList3SigType4=Serial
-InputList3Cue5=[~UNUSED2~]
-InputList3SigType5=Serial
-InputList3Cue6=[~UNUSED2~]
-InputList3SigType6=Serial
-InputList3Cue7=[~UNUSED2~]
-InputList3SigType7=Serial
-InputList3Cue8=[~UNUSED2~]
-InputList3SigType8=Serial
-InputList3Cue9=[~UNUSED2~]
-InputList3SigType9=Serial
-InputList3Cue10=[~UNUSED2~]
-InputList3SigType10=Serial
-InputList3Cue11=[~BeginGroup~]text-o
-InputList3SigType11=Serial
-InputList3Cue12=text-o1
-InputList3SigType12=Serial
-InputList3Cue13=[~EndGroup~]text-o
-InputList3SigType13=Serial
-OutputList3Cue1=[~UNUSED2~]
-OutputList3SigType1=Serial
-OutputList3Cue2=[~UNUSED2~]
-OutputList3SigType2=Serial
-OutputList3Cue3=[~UNUSED2~]
-OutputList3SigType3=Serial
-OutputList3Cue4=[~UNUSED2~]
-OutputList3SigType4=Serial
-OutputList3Cue5=[~UNUSED2~]
-OutputList3SigType5=Serial
-OutputList3Cue6=[~UNUSED2~]
-OutputList3SigType6=Serial
-OutputList3Cue7=[~UNUSED2~]
-OutputList3SigType7=Serial
-OutputList3Cue8=[~UNUSED2~]
-OutputList3SigType8=Serial
-OutputList3Cue9=[~UNUSED2~]
-OutputList3SigType9=Serial
-OutputList3Cue10=[~UNUSED2~]
-OutputList3SigType10=Serial
-OutputList3Cue11=[~BeginGroup~]text-i
-OutputList3SigType11=Serial
-OutputList3Cue12=text-i1
-OutputList3SigType12=Serial
-OutputList3Cue13=[~EndGroup~]text-i
-OutputList3SigType13=Serial
-ParamCue1=SmartObjectId
-ParamSigType1=Constant
-MPp=1
-Pp1=18
-CedH=18
-SmartObjId=26d
-]
-; Parameter Properties for Smart Object ID
-[
-ObjTp=Dp
-H=18
-Tp=1
-HD=TRUE
-DV=26d
-NF=1
-DNF=1
-EncFmt=0
-DVLF=1
-Sgn=0
-]
-; Smart Objects Definition section
-[
-ObjTp=CED
-H=18
-Name=HSV_5853_Concierge_TS_1070_[MODE]Lighting_LightingControlBottomHeader.ced
-;Cedver is the version of the Smart Graphics control, not the CED file format.
-;If the control definition changes, increment this.
-CedVer=1
-]
-;================================================================================
-[
-ObjTp=Symbol
-Name=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadePageTitle.ced
-Hint=ShadePageTitle (Smart Object ID=27)
-Code=19
-SGControlType=Subpage Reference List Horizontal
-SGControlName=ShadePageTitle
-GUID=2343181D-442A-4BD6-B8D4-A6C01DD62256
-SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadePageTitle.ced
-SMWRev=4.02.20
-Expand=expand_random
-HelpID=10124
-Render=8
-;Define the number of inputs, outputs and parameters
-MinVariableInputs=4014
-MaxVariableInputs=4014
-MinVariableOutputs=4014
-MaxVariableOutputs=4014
-NumFixedParams=1
-MinVariableInputsList2=3
-MaxVariableInputsList2=3
-MinVariableOutputsList2=3
-MaxVariableOutputsList2=3
-MinVariableInputsList3=13
-MaxVariableInputsList3=13
-MinVariableOutputsList3=13
-MaxVariableOutputsList3=13
-InputSigType1=Digital
-OutputSigType1=Digital
-InputList2SigType1=Analog
-OutputList2SigType1=Analog
-InputList3SigType1=Serial
-OutputList3SigType1=Serial
-
-;Define the cues, and signal types  each input, output and parameter.
-InputCue1=[~UNUSED3~]
-InputSigType1=Digital
-InputCue2=[~UNUSED2~]
-InputSigType2=Digital
-InputCue3=[~UNUSED2~]
-InputSigType3=Digital
-InputCue4=[~UNUSED2~]
-InputSigType4=Digital
-InputCue5=[~UNUSED2~]
-InputSigType5=Digital
-InputCue6=[~UNUSED2~]
-InputSigType6=Digital
-InputCue7=[~UNUSED2~]
-InputSigType7=Digital
-InputCue8=[~UNUSED2~]
-InputSigType8=Digital
-InputCue9=[~UNUSED2~]
-InputSigType9=Digital
-InputCue10=[~UNUSED2~]
-InputSigType10=Digital
-InputCue11=[~BeginGroup~]Enable
-InputSigType11=Digital
-InputCue12=Item 1 Enable
-InputSigType12=Digital
-InputCue13=[~UNUSED2~]
-InputSigType13=Digital|Analog|Serial|String
-InputCue2012=[~EndGroup~]Enable
-InputSigType2012=Digital
-InputCue2013=[~BeginGroup~]Visible
-InputSigType2013=Digital
-InputCue2014=Item 1 Visible
-InputSigType2014=Digital
-InputCue2015=[~UNUSED2~]
-InputSigType2015=Digital|Analog|Serial|String
-InputCue4014=[~EndGroup~]Visible
-InputSigType4014=Digital
-OutputCue1=Is Moving
-OutputSigType1=Digital
-OutputCue2=[~UNUSED2~]
-OutputSigType2=Digital
-OutputCue3=[~UNUSED2~]
-OutputSigType3=Digital
-OutputCue4=[~UNUSED2~]
-OutputSigType4=Digital
-OutputCue5=[~UNUSED2~]
-OutputSigType5=Digital
-OutputCue6=[~UNUSED2~]
-OutputSigType6=Digital
-OutputCue7=[~UNUSED2~]
-OutputSigType7=Digital
-OutputCue8=[~UNUSED2~]
-OutputSigType8=Digital
-OutputCue9=[~UNUSED2~]
-OutputSigType9=Digital
-OutputCue10=[~UNUSED2~]
-OutputSigType10=Digital
-OutputCue11=[~BeginGroup~]Enable
-OutputSigType11=Digital
-OutputCue12=[~UNUSED3~]
-OutputSigType12=Digital
-OutputCue13=[~UNUSED2~]
-OutputSigType13=Digital|Analog|Serial|String
-OutputCue2012=[~EndGroup~]Enable
-OutputSigType2012=Digital
-OutputCue2013=[~BeginGroup~]Visible
-OutputSigType2013=Digital
-OutputCue2014=[~UNUSED3~]
-OutputSigType2014=Digital
-OutputCue2015=[~UNUSED2~]
-OutputSigType2015=Digital|Analog|Serial|String
-OutputCue4014=[~EndGroup~]Visible
-OutputSigType4014=Digital
-InputList2Cue1=[~UNUSED3~]
-InputList2SigType1=Analog
-InputList2Cue2=Scroll To Item
-InputList2SigType2=Analog
-InputList2Cue3=Set Number of Items
-InputList2SigType3=Analog
-OutputList2Cue1=Item Clicked
-OutputList2SigType1=Analog
-OutputList2Cue2=[~UNUSED3~]
-OutputList2SigType2=Analog
-OutputList2Cue3=[~UNUSED3~]
-OutputList2SigType3=Analog
-InputList3Cue1=[~UNUSED2~]
-InputList3SigType1=Serial
-InputList3Cue2=[~UNUSED2~]
-InputList3SigType2=Serial
-InputList3Cue3=[~UNUSED2~]
-InputList3SigType3=Serial
-InputList3Cue4=[~UNUSED2~]
-InputList3SigType4=Serial
-InputList3Cue5=[~UNUSED2~]
-InputList3SigType5=Serial
-InputList3Cue6=[~UNUSED2~]
-InputList3SigType6=Serial
-InputList3Cue7=[~UNUSED2~]
-InputList3SigType7=Serial
-InputList3Cue8=[~UNUSED2~]
-InputList3SigType8=Serial
-InputList3Cue9=[~UNUSED2~]
-InputList3SigType9=Serial
-InputList3Cue10=[~UNUSED2~]
-InputList3SigType10=Serial
-InputList3Cue11=[~BeginGroup~]text-o
-InputList3SigType11=Serial
-InputList3Cue12=text-o1
-InputList3SigType12=Serial
-InputList3Cue13=[~EndGroup~]text-o
-InputList3SigType13=Serial
-OutputList3Cue1=[~UNUSED2~]
-OutputList3SigType1=Serial
-OutputList3Cue2=[~UNUSED2~]
-OutputList3SigType2=Serial
-OutputList3Cue3=[~UNUSED2~]
-OutputList3SigType3=Serial
-OutputList3Cue4=[~UNUSED2~]
-OutputList3SigType4=Serial
-OutputList3Cue5=[~UNUSED2~]
-OutputList3SigType5=Serial
-OutputList3Cue6=[~UNUSED2~]
-OutputList3SigType6=Serial
-OutputList3Cue7=[~UNUSED2~]
-OutputList3SigType7=Serial
-OutputList3Cue8=[~UNUSED2~]
-OutputList3SigType8=Serial
-OutputList3Cue9=[~UNUSED2~]
-OutputList3SigType9=Serial
-OutputList3Cue10=[~UNUSED2~]
-OutputList3SigType10=Serial
-OutputList3Cue11=[~BeginGroup~]text-i
-OutputList3SigType11=Serial
-OutputList3Cue12=text-i1
-OutputList3SigType12=Serial
-OutputList3Cue13=[~EndGroup~]text-i
-OutputList3SigType13=Serial
-ParamCue1=SmartObjectId
-ParamSigType1=Constant
-MPp=1
-Pp1=19
-CedH=19
 SmartObjId=27d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=19
+H=17
 Tp=1
 HD=TRUE
 DV=27d
@@ -5497,7 +4971,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=19
+H=17
 Name=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadePageTitle.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
@@ -5508,10 +4982,10 @@ CedVer=1
 ObjTp=Symbol
 Name=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeTopPresets.ced
 Hint=ShadeTopPresets (Smart Object ID=29)
-Code=20
+Code=18
 SGControlType=Subpage Reference List Horizontal
 SGControlName=ShadeTopPresets
-GUID=585F0D4B-5274-4E9B-8CE7-276E641B6F09
+GUID=5FB48F7C-B65D-4E3A-963C-642A465DDF52
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeTopPresets.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -5802,14 +5276,14 @@ OutputList3SigType20=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=20
-CedH=20
+Pp1=18
+CedH=18
 SmartObjId=29d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=20
+H=18
 Tp=1
 HD=TRUE
 DV=29d
@@ -5822,7 +5296,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=20
+H=18
 Name=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeTopPresets.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
@@ -5833,10 +5307,10 @@ CedVer=1
 ObjTp=Symbol
 Name=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeBottomPresets.ced
 Hint=ShadeBottomPresets (Smart Object ID=31)
-Code=21
+Code=19
 SGControlType=Subpage Reference List Horizontal
 SGControlName=ShadeBottomPresets
-GUID=8EBA1AF2-B998-4D29-B023-C0AE890C3EF8
+GUID=02AB6545-88D2-4CD9-8C5B-B3EB961FBEDF
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeBottomPresets.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -6127,14 +5601,14 @@ OutputList3SigType20=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=21
-CedH=21
+Pp1=19
+CedH=19
 SmartObjId=31d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=21
+H=19
 Tp=1
 HD=TRUE
 DV=31d
@@ -6147,7 +5621,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=21
+H=19
 Name=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeBottomPresets.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
@@ -6158,10 +5632,10 @@ CedVer=1
 ObjTp=Symbol
 Name=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeControlTopHeader.ced
 Hint=ShadeControlTopHeader (Smart Object ID=28)
-Code=22
+Code=20
 SGControlType=Subpage Reference List Horizontal
 SGControlName=ShadeControlTopHeader
-GUID=C36DEEEB-1F37-44D9-AEE5-F96A64DF7765
+GUID=175559B9-9AEC-4685-984E-0842E2B28ECF
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeControlTopHeader.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -6328,14 +5802,14 @@ OutputList3SigType13=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=22
-CedH=22
+Pp1=20
+CedH=20
 SmartObjId=28d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=22
+H=20
 Tp=1
 HD=TRUE
 DV=28d
@@ -6348,7 +5822,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=22
+H=20
 Name=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeControlTopHeader.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
@@ -6359,10 +5833,10 @@ CedVer=1
 ObjTp=Symbol
 Name=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeControlBottomHeader.ced
 Hint=ShadeControlBottomHeader (Smart Object ID=30)
-Code=23
+Code=21
 SGControlType=Subpage Reference List Horizontal
 SGControlName=ShadeControlBottomHeader
-GUID=F95B244E-37D5-4574-A43E-2EAA60274D72
+GUID=D9445BBF-0932-4FB7-BF5C-1E8E8DB7F133
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeControlBottomHeader.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -6529,14 +6003,14 @@ OutputList3SigType13=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=23
-CedH=23
+Pp1=21
+CedH=21
 SmartObjId=30d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=23
+H=21
 Tp=1
 HD=TRUE
 DV=30d
@@ -6549,7 +6023,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=23
+H=21
 Name=HSV_5853_Concierge_TS_1070_[MODE]Shades_ShadeControlBottomHeader.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
@@ -6560,10 +6034,10 @@ CedVer=1
 ObjTp=Symbol
 Name=HSV_5853_Concierge_TS_1070_[MODE]AudioLineControlWithSources_AudioLineControlHoriWithSources.ced
 Hint=AudioLineControlHoriWithSources (Smart Object ID=32)
-Code=24
+Code=22
 SGControlType=Subpage Reference List Vertical
 SGControlName=AudioLineControlHoriWithSources
-GUID=E5FCAF32-D2A9-44A9-8B97-B28D314CF7F4
+GUID=BD79F6E3-E66B-47BC-BB85-43D6754169AE
 SmplCName=HSV_5853_Concierge_TS_1070_[MODE]AudioLineControlWithSources_AudioLineControlHoriWithSources.ced
 SMWRev=4.02.20
 Expand=expand_random
@@ -7210,14 +6684,14 @@ OutputList3SigType44=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=24
-CedH=24
+Pp1=22
+CedH=22
 SmartObjId=32d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=24
+H=22
 Tp=1
 HD=TRUE
 DV=32d
@@ -7230,7 +6704,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=24
+H=22
 Name=HSV_5853_Concierge_TS_1070_[MODE]AudioLineControlWithSources_AudioLineControlHoriWithSources.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.

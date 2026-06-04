@@ -13,7 +13,7 @@ Hint=RoomModeSelectList (Smart Object ID=49)
 Code=13
 SGControlType=Subpage Reference List Horizontal
 SGControlName=RoomModeSelectList
-GUID=F5A1700F-512F-4FE8-99A0-FC48D6CDC16F
+GUID=3224AED8-72A7-421B-8CB2-BD7F6AB2380E
 SmplCName=HSV_5853_Concierge_TS_1070_[SYS]RoomMode_RoomModeSelectList.ced
 SMWRev=4.02.20
 Expand=expand_random
