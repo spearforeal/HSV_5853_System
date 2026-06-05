@@ -110,7 +110,19 @@
     "ShadePreset5Visible": ["True"],
     "ShadePreset6Visible": ["True"],
     "ShadePreset7Visible": ["True"],
-    "ShadePreset8Visible": ["True"]
+    "ShadePreset8Visible": ["True"],
+
+    "FooterBtn1Name": ["Preset1"],
+    "FooterBtn2Name": ["Preset2"],
+    "FooterBtn3Name": ["Preset3"],
+    "FooterBtn4Name": ["Preset4"],
+    "FooterBtn5Name": ["Preset5"],
+
+    "FooterBtn1Visible": ["False"],
+    "FooterBtn2Visible": ["False"],
+    "FooterBtn3Visible": ["False"],
+    "FooterBtn4Visible": ["False"],
+    "FooterBtn5Visible": ["False"]
   },
   "dining": {
     "AudioCtrl1Name": ["Program"],

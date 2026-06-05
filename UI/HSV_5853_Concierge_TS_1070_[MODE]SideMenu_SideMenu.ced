@@ -10,7 +10,7 @@ VTProeVer=6.2.02
 ObjTp=Symbol
 Name=HSV_5853_Concierge_TS_1070_[MODE]SideMenu_SideMenu.ced
 Hint=SideMenu (Smart Object ID=6)
-Code=8
+Code=9
 SGControlType=Subpage Reference List Vertical
 SGControlName=SideMenu
 GUID=E6F91468-C9C9-4F4E-BC85-FB1813CE4CFB
@@ -368,14 +368,14 @@ OutputList3SigType24=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=8
-CedH=8
+Pp1=9
+CedH=9
 SmartObjId=6d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=8
+H=9
 Tp=1
 HD=TRUE
 DV=6d
@@ -388,7 +388,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=8
+H=9
 Name=HSV_5853_Concierge_TS_1070_[MODE]SideMenu_SideMenu.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
