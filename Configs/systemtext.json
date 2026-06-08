@@ -18,6 +18,7 @@
     "StartPageBGMButtonName": ["BGM"],
     "BanquetRoomModeButtonName": ["Room Mode"],
     "LogOffButtonName": ["Log Off"],
-    "ConciergeName": ["Concierge"]
+    "ConciergeName": ["Concierge"],
+    "DiningName": ["Private Dining"]
   }
 }
