@@ -125,6 +125,19 @@
     "FooterBtn5Visible": ["False"]
   },
   "dining": {
+    "Mode1Name": [""],
+    "Mode2Name": ["Audio"],
+    "Mode3Name": ["Lights"],
+    "Mode4Name": ["Shades"],
+    "Mode5Name": [""],
+    "Mode6Name": [""],
+    "Mode7Name": [""],
+    "Mode8Name": [""],
+    "Mode9Name": [""],
+    "Mode10Name": [""],
+    "Mode11Name": [""],
+    "Mode12Name": [""],
+
     "AudioCtrl1Name": ["Program"],
     "AudioCtrl2Name": ["Speakers"],
     "AudioCtrl3Name": [""],
