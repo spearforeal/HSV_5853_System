@@ -10,7 +10,7 @@ VTProeVer=6.2.02
 ObjTp=Symbol
 Name=HSV_5853_Office_TSW_750_[MODE]Routing_RoutingClearBtn.ced
 Hint=RoutingClearBtn (Smart Object ID=4)
-Code=6
+Code=7
 SGControlType=Subpage Reference List Vertical
 SGControlName=RoutingClearBtn
 GUID=01F99A98-8ABF-4A57-9300-66124481F766
@@ -196,14 +196,14 @@ OutputList3SigType14=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=6
-CedH=6
+Pp1=7
+CedH=7
 SmartObjId=4d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=6
+H=7
 Tp=1
 HD=TRUE
 DV=4d
@@ -216,7 +216,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=6
+H=7
 Name=HSV_5853_Office_TSW_750_[MODE]Routing_RoutingClearBtn.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.

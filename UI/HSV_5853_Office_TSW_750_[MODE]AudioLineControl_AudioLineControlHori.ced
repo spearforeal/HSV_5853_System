@@ -10,7 +10,7 @@ VTProeVer=6.2.02
 ObjTp=Symbol
 Name=HSV_5853_Office_TSW_750_[MODE]AudioLineControl_AudioLineControlHori.ced
 Hint=AudioLineControlHori (Smart Object ID=20)
-Code=11
+Code=12
 SGControlType=Subpage Reference List Vertical
 SGControlName=AudioLineControlHori
 GUID=2ACB04C2-0A7F-42F3-9120-A9292C86DC7A
@@ -548,14 +548,14 @@ OutputList3SigType24=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=11
-CedH=11
+Pp1=12
+CedH=12
 SmartObjId=20d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=11
+H=12
 Tp=1
 HD=TRUE
 DV=20d
@@ -568,7 +568,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=11
+H=12
 Name=HSV_5853_Office_TSW_750_[MODE]AudioLineControl_AudioLineControlHori.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.

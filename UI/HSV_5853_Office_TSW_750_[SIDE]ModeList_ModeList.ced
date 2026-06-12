@@ -10,7 +10,7 @@ VTProeVer=6.2.02
 ObjTp=Symbol
 Name=HSV_5853_Office_TSW_750_[SIDE]ModeList_ModeList.ced
 Hint=ModeList (Smart Object ID=1)
-Code=3
+Code=4
 SGControlType=Subpage Reference List Vertical
 SGControlName=ModeList
 GUID=3DC1F03D-D1A1-45F5-A5F4-189D37AF66A8
@@ -368,14 +368,14 @@ OutputList3SigType24=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=3
-CedH=3
+Pp1=4
+CedH=4
 SmartObjId=1d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=3
+H=4
 Tp=1
 HD=TRUE
 DV=1d
@@ -388,7 +388,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=3
+H=4
 Name=HSV_5853_Office_TSW_750_[SIDE]ModeList_ModeList.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.

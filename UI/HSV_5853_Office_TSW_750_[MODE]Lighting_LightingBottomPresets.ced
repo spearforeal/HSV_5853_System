@@ -10,7 +10,7 @@ VTProeVer=6.2.02
 ObjTp=Symbol
 Name=HSV_5853_Office_TSW_750_[MODE]Lighting_LightingBottomPresets.ced
 Hint=LightingBottomPresets (Smart Object ID=25)
-Code=16
+Code=17
 SGControlType=Subpage Reference List Horizontal
 SGControlName=LightingBottomPresets
 GUID=4787437F-1916-4A81-B3C7-F0E2486AD56C
@@ -304,14 +304,14 @@ OutputList3SigType20=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=16
-CedH=16
+Pp1=17
+CedH=17
 SmartObjId=25d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=16
+H=17
 Tp=1
 HD=TRUE
 DV=25d
@@ -324,7 +324,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=16
+H=17
 Name=HSV_5853_Office_TSW_750_[MODE]Lighting_LightingBottomPresets.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
