@@ -104,7 +104,14 @@
     "SecondLvlSideMenu9Visible": ["True"],
     "SecondLvlSideMenu10Visible": ["True"],
     "SecondLvlSideMenu11Visible": ["False"],
-    "SecondLvlSideMenu12Visible": ["False"]
+    "SecondLvlSideMenu12Visible": ["False"],
+
+    "Source1Name": ["BGM 1"],
+    "Source2Name": ["BGM 2"],
+    "Source3Name": ["BGM 3"],
+    "Source4Name": ["BGM 4"],
+    "Source5Name": ["Blu Tooth"],
+    "Source6Name": ["Aux"]
   },
   "salon": {
     "AudioControl1Name": ["Program"],
