@@ -19,6 +19,7 @@
     "BanquetRoomModeButtonName": ["Room Mode"],
     "LogOffButtonName": ["Log Off"],
     "ConciergeName": ["Concierge"],
-    "DiningName": ["Private Dining"]
+    "DiningName": ["Private Dining"],
+    "OfficeName": ["Office"]
   }
 }
