@@ -106,12 +106,12 @@
     "SecondLvlSideMenu11Visible": ["False"],
     "SecondLvlSideMenu12Visible": ["False"],
 
-    "Source1Name": ["BGM 1"],
-    "Source2Name": ["BGM 2"],
-    "Source3Name": ["BGM 3"],
-    "Source4Name": ["BGM 4"],
-    "Source5Name": ["BT"],
-    "Source6Name": ["Aux"]
+    "Source1Name": ["BT"],
+    "Source2Name": ["AUX"],
+    "Source3Name": ["BGM 1"],
+    "Source4Name": ["BGM 2"],
+    "Source5Name": ["BGM 3"],
+    "Source6Name": ["BGM 4"]
   },
   "salon": {
     "AudioCtrl1Name": ["Program"],
@@ -294,7 +294,7 @@
     "AudioCtrl1Visible": ["True"],
     "AudioCtrl2Visible": ["True"],
     "AudioCtrl3Visible": ["True"],
-    "AudioCtrl4Visible": ["False"],
+    "AudioCtrl4Visible": ["True"],
     "AudioCtrl5Visible": ["False"],
     "AudioCtrl6Visible": ["False"],
     "AudioCtrl7Visible": ["False"],
