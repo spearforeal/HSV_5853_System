@@ -20,6 +20,10 @@
     "LogOffButtonName": ["Log Off"],
     "ConciergeName": ["Concierge"],
     "DiningName": ["Private Dining"],
-    "OfficeName": ["Office"]
+    "OfficeName": ["Office"],
+    "BGMSrc1Name": ["BGM 1"],
+    "BGMSrc2Name": ["BGM 2"],
+    "BGMSrc3Name": ["BGM 3"],
+    "BGMSrc4Name": ["BGM 4"]
   }
 }
