@@ -10,7 +10,7 @@ VTProeVer=6.2.02
 ObjTp=Symbol
 Name=HSV_5853_Office_TSW_750_[MODE]AudioLineControlWithSources_BGM Select List.ced
 Hint=BGM Select List (Smart Object ID=34)
-Code=25
+Code=26
 SGControlType=Subpage Reference List Horizontal
 SGControlName=BGM Select List
 GUID=693E971B-DA91-4094-AE8D-9BB884306E51
@@ -240,14 +240,14 @@ OutputList3SigType16=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=25
-CedH=25
+Pp1=26
+CedH=26
 SmartObjId=34d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=25
+H=26
 Tp=1
 HD=TRUE
 DV=34d
@@ -260,7 +260,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=25
+H=26
 Name=HSV_5853_Office_TSW_750_[MODE]AudioLineControlWithSources_BGM Select List.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.

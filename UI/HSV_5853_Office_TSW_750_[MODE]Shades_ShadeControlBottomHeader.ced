@@ -10,7 +10,7 @@ VTProeVer=6.2.02
 ObjTp=Symbol
 Name=HSV_5853_Office_TSW_750_[MODE]Shades_ShadeControlBottomHeader.ced
 Hint=ShadeControlBottomHeader (Smart Object ID=30)
-Code=23
+Code=24
 SGControlType=Subpage Reference List Horizontal
 SGControlName=ShadeControlBottomHeader
 GUID=2D8DB5A6-D33F-4BE5-9EE7-84ADB65074B7
@@ -180,14 +180,14 @@ OutputList3SigType13=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=23
-CedH=23
+Pp1=24
+CedH=24
 SmartObjId=30d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=23
+H=24
 Tp=1
 HD=TRUE
 DV=30d
@@ -200,7 +200,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=23
+H=24
 Name=HSV_5853_Office_TSW_750_[MODE]Shades_ShadeControlBottomHeader.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.

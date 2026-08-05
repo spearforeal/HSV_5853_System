@@ -4,7 +4,7 @@ Sgntr=SGD
 RelVrs=3
 VTProeVer=6.2.02
 Schema=1
-CRCGUID=D61E5D31-2A48-4A27-BC58-523D106145E5
+CRCGUID=4AA3459E-D642-4E0A-8268-413CD28B05E0
 ]
 ;================================================================================
 [
@@ -5605,9 +5605,210 @@ CedVer=1
 ;================================================================================
 [
 ObjTp=Symbol
+Name=HSV_5853_Office_TSW_750_[MODE]Lighting_LightingControlBottomHeader.ced
+Hint=LightingControlBottomHeader (Smart Object ID=33)
+Code=19
+SGControlType=Subpage Reference List Horizontal
+SGControlName=LightingControlBottomHeader
+GUID=963C3014-8631-40D5-99DE-DBD15ED725FC
+SmplCName=HSV_5853_Office_TSW_750_[MODE]Lighting_LightingControlBottomHeader.ced
+SMWRev=4.02.20
+Expand=expand_random
+HelpID=10124
+Render=8
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=4014
+MaxVariableInputs=4014
+MinVariableOutputs=4014
+MaxVariableOutputs=4014
+NumFixedParams=1
+MinVariableInputsList2=3
+MaxVariableInputsList2=3
+MinVariableOutputsList2=3
+MaxVariableOutputsList2=3
+MinVariableInputsList3=13
+MaxVariableInputsList3=13
+MinVariableOutputsList3=13
+MaxVariableOutputsList3=13
+InputSigType1=Digital
+OutputSigType1=Digital
+InputList2SigType1=Analog
+OutputList2SigType1=Analog
+InputList3SigType1=Serial
+OutputList3SigType1=Serial
+
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=[~UNUSED3~]
+InputSigType1=Digital
+InputCue2=[~UNUSED2~]
+InputSigType2=Digital
+InputCue3=[~UNUSED2~]
+InputSigType3=Digital
+InputCue4=[~UNUSED2~]
+InputSigType4=Digital
+InputCue5=[~UNUSED2~]
+InputSigType5=Digital
+InputCue6=[~UNUSED2~]
+InputSigType6=Digital
+InputCue7=[~UNUSED2~]
+InputSigType7=Digital
+InputCue8=[~UNUSED2~]
+InputSigType8=Digital
+InputCue9=[~UNUSED2~]
+InputSigType9=Digital
+InputCue10=[~UNUSED2~]
+InputSigType10=Digital
+InputCue11=[~BeginGroup~]Enable
+InputSigType11=Digital
+InputCue12=Item 1 Enable
+InputSigType12=Digital
+InputCue13=[~UNUSED2~]
+InputSigType13=Digital|Analog|Serial|String
+InputCue2012=[~EndGroup~]Enable
+InputSigType2012=Digital
+InputCue2013=[~BeginGroup~]Visible
+InputSigType2013=Digital
+InputCue2014=Item 1 Visible
+InputSigType2014=Digital
+InputCue2015=[~UNUSED2~]
+InputSigType2015=Digital|Analog|Serial|String
+InputCue4014=[~EndGroup~]Visible
+InputSigType4014=Digital
+OutputCue1=Is Moving
+OutputSigType1=Digital
+OutputCue2=[~UNUSED2~]
+OutputSigType2=Digital
+OutputCue3=[~UNUSED2~]
+OutputSigType3=Digital
+OutputCue4=[~UNUSED2~]
+OutputSigType4=Digital
+OutputCue5=[~UNUSED2~]
+OutputSigType5=Digital
+OutputCue6=[~UNUSED2~]
+OutputSigType6=Digital
+OutputCue7=[~UNUSED2~]
+OutputSigType7=Digital
+OutputCue8=[~UNUSED2~]
+OutputSigType8=Digital
+OutputCue9=[~UNUSED2~]
+OutputSigType9=Digital
+OutputCue10=[~UNUSED2~]
+OutputSigType10=Digital
+OutputCue11=[~BeginGroup~]Enable
+OutputSigType11=Digital
+OutputCue12=[~UNUSED3~]
+OutputSigType12=Digital
+OutputCue13=[~UNUSED2~]
+OutputSigType13=Digital|Analog|Serial|String
+OutputCue2012=[~EndGroup~]Enable
+OutputSigType2012=Digital
+OutputCue2013=[~BeginGroup~]Visible
+OutputSigType2013=Digital
+OutputCue2014=[~UNUSED3~]
+OutputSigType2014=Digital
+OutputCue2015=[~UNUSED2~]
+OutputSigType2015=Digital|Analog|Serial|String
+OutputCue4014=[~EndGroup~]Visible
+OutputSigType4014=Digital
+InputList2Cue1=[~UNUSED3~]
+InputList2SigType1=Analog
+InputList2Cue2=Scroll To Item
+InputList2SigType2=Analog
+InputList2Cue3=Set Number of Items
+InputList2SigType3=Analog
+OutputList2Cue1=Item Clicked
+OutputList2SigType1=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList3Cue1=[~UNUSED2~]
+InputList3SigType1=Serial
+InputList3Cue2=[~UNUSED2~]
+InputList3SigType2=Serial
+InputList3Cue3=[~UNUSED2~]
+InputList3SigType3=Serial
+InputList3Cue4=[~UNUSED2~]
+InputList3SigType4=Serial
+InputList3Cue5=[~UNUSED2~]
+InputList3SigType5=Serial
+InputList3Cue6=[~UNUSED2~]
+InputList3SigType6=Serial
+InputList3Cue7=[~UNUSED2~]
+InputList3SigType7=Serial
+InputList3Cue8=[~UNUSED2~]
+InputList3SigType8=Serial
+InputList3Cue9=[~UNUSED2~]
+InputList3SigType9=Serial
+InputList3Cue10=[~UNUSED2~]
+InputList3SigType10=Serial
+InputList3Cue11=[~BeginGroup~]text-o
+InputList3SigType11=Serial
+InputList3Cue12=text-o1
+InputList3SigType12=Serial
+InputList3Cue13=[~EndGroup~]text-o
+InputList3SigType13=Serial
+OutputList3Cue1=[~UNUSED2~]
+OutputList3SigType1=Serial
+OutputList3Cue2=[~UNUSED2~]
+OutputList3SigType2=Serial
+OutputList3Cue3=[~UNUSED2~]
+OutputList3SigType3=Serial
+OutputList3Cue4=[~UNUSED2~]
+OutputList3SigType4=Serial
+OutputList3Cue5=[~UNUSED2~]
+OutputList3SigType5=Serial
+OutputList3Cue6=[~UNUSED2~]
+OutputList3SigType6=Serial
+OutputList3Cue7=[~UNUSED2~]
+OutputList3SigType7=Serial
+OutputList3Cue8=[~UNUSED2~]
+OutputList3SigType8=Serial
+OutputList3Cue9=[~UNUSED2~]
+OutputList3SigType9=Serial
+OutputList3Cue10=[~UNUSED2~]
+OutputList3SigType10=Serial
+OutputList3Cue11=[~BeginGroup~]text-i
+OutputList3SigType11=Serial
+OutputList3Cue12=text-i1
+OutputList3SigType12=Serial
+OutputList3Cue13=[~EndGroup~]text-i
+OutputList3SigType13=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=19
+CedH=19
+SmartObjId=33d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=19
+Tp=1
+HD=TRUE
+DV=33d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=19
+Name=HSV_5853_Office_TSW_750_[MODE]Lighting_LightingControlBottomHeader.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]
+;================================================================================
+[
+ObjTp=Symbol
 Name=HSV_5853_Office_TSW_750_[MODE]Shades_ShadePageTitle.ced
 Hint=ShadePageTitle (Smart Object ID=27)
-Code=19
+Code=20
 SGControlType=Subpage Reference List Horizontal
 SGControlName=ShadePageTitle
 GUID=73D735E6-4E98-4EBC-921A-8EDD16BBD375
@@ -5777,14 +5978,14 @@ OutputList3SigType13=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=19
-CedH=19
+Pp1=20
+CedH=20
 SmartObjId=27d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=19
+H=20
 Tp=1
 HD=TRUE
 DV=27d
@@ -5797,7 +5998,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=19
+H=20
 Name=HSV_5853_Office_TSW_750_[MODE]Shades_ShadePageTitle.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
@@ -5808,7 +6009,7 @@ CedVer=1
 ObjTp=Symbol
 Name=HSV_5853_Office_TSW_750_[MODE]Shades_ShadeTopPresets.ced
 Hint=ShadeTopPresets (Smart Object ID=29)
-Code=20
+Code=21
 SGControlType=Subpage Reference List Horizontal
 SGControlName=ShadeTopPresets
 GUID=D1091E33-A58C-4EDE-A6C7-300F7C7CD5CA
@@ -6102,14 +6303,14 @@ OutputList3SigType20=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=20
-CedH=20
+Pp1=21
+CedH=21
 SmartObjId=29d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=20
+H=21
 Tp=1
 HD=TRUE
 DV=29d
@@ -6122,7 +6323,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=20
+H=21
 Name=HSV_5853_Office_TSW_750_[MODE]Shades_ShadeTopPresets.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
@@ -6133,7 +6334,7 @@ CedVer=1
 ObjTp=Symbol
 Name=HSV_5853_Office_TSW_750_[MODE]Shades_ShadeBottomPresets.ced
 Hint=ShadeBottomPresets (Smart Object ID=31)
-Code=21
+Code=22
 SGControlType=Subpage Reference List Horizontal
 SGControlName=ShadeBottomPresets
 GUID=289C9E40-B9FC-4851-A8CC-C4C387D20451
@@ -6427,14 +6628,14 @@ OutputList3SigType20=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=21
-CedH=21
+Pp1=22
+CedH=22
 SmartObjId=31d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=21
+H=22
 Tp=1
 HD=TRUE
 DV=31d
@@ -6447,7 +6648,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=21
+H=22
 Name=HSV_5853_Office_TSW_750_[MODE]Shades_ShadeBottomPresets.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
@@ -6458,7 +6659,7 @@ CedVer=1
 ObjTp=Symbol
 Name=HSV_5853_Office_TSW_750_[MODE]Shades_ShadeControlTopHeader.ced
 Hint=ShadeControlTopHeader (Smart Object ID=28)
-Code=22
+Code=23
 SGControlType=Subpage Reference List Horizontal
 SGControlName=ShadeControlTopHeader
 GUID=6DEA7BD1-F9BF-4237-9FC6-5C1097282D5C
@@ -6628,14 +6829,14 @@ OutputList3SigType13=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=22
-CedH=22
+Pp1=23
+CedH=23
 SmartObjId=28d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=22
+H=23
 Tp=1
 HD=TRUE
 DV=28d
@@ -6648,7 +6849,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=22
+H=23
 Name=HSV_5853_Office_TSW_750_[MODE]Shades_ShadeControlTopHeader.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
@@ -6659,7 +6860,7 @@ CedVer=1
 ObjTp=Symbol
 Name=HSV_5853_Office_TSW_750_[MODE]Shades_ShadeControlBottomHeader.ced
 Hint=ShadeControlBottomHeader (Smart Object ID=30)
-Code=23
+Code=24
 SGControlType=Subpage Reference List Horizontal
 SGControlName=ShadeControlBottomHeader
 GUID=2D8DB5A6-D33F-4BE5-9EE7-84ADB65074B7
@@ -6829,14 +7030,14 @@ OutputList3SigType13=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=23
-CedH=23
+Pp1=24
+CedH=24
 SmartObjId=30d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=23
+H=24
 Tp=1
 HD=TRUE
 DV=30d
@@ -6849,7 +7050,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=23
+H=24
 Name=HSV_5853_Office_TSW_750_[MODE]Shades_ShadeControlBottomHeader.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
@@ -6860,7 +7061,7 @@ CedVer=1
 ObjTp=Symbol
 Name=HSV_5853_Office_TSW_750_[MODE]AudioLineControlWithSources_AudioLineControlHoriWithSources.ced
 Hint=AudioLineControlHoriWithSources (Smart Object ID=32)
-Code=24
+Code=25
 SGControlType=Subpage Reference List Vertical
 SGControlName=AudioLineControlHoriWithSources
 GUID=4DA53734-F492-49B1-B79D-71CA293594F2
@@ -7830,14 +8031,14 @@ OutputList3SigType72=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=24
-CedH=24
+Pp1=25
+CedH=25
 SmartObjId=32d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=24
+H=25
 Tp=1
 HD=TRUE
 DV=32d
@@ -7850,7 +8051,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=24
+H=25
 Name=HSV_5853_Office_TSW_750_[MODE]AudioLineControlWithSources_AudioLineControlHoriWithSources.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
@@ -7861,7 +8062,7 @@ CedVer=1
 ObjTp=Symbol
 Name=HSV_5853_Office_TSW_750_[MODE]AudioLineControlWithSources_BGM Select List.ced
 Hint=BGM Select List (Smart Object ID=34)
-Code=25
+Code=26
 SGControlType=Subpage Reference List Horizontal
 SGControlName=BGM Select List
 GUID=693E971B-DA91-4094-AE8D-9BB884306E51
@@ -8091,14 +8292,14 @@ OutputList3SigType16=Serial
 ParamCue1=SmartObjectId
 ParamSigType1=Constant
 MPp=1
-Pp1=25
-CedH=25
+Pp1=26
+CedH=26
 SmartObjId=34d
 ]
 ; Parameter Properties for Smart Object ID
 [
 ObjTp=Dp
-H=25
+H=26
 Tp=1
 HD=TRUE
 DV=34d
@@ -8111,7 +8312,7 @@ Sgn=0
 ; Smart Objects Definition section
 [
 ObjTp=CED
-H=25
+H=26
 Name=HSV_5853_Office_TSW_750_[MODE]AudioLineControlWithSources_BGM Select List.ced
 ;Cedver is the version of the Smart Graphics control, not the CED file format.
 ;If the control definition changes, increment this.
