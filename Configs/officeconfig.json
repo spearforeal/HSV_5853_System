@@ -31,7 +31,7 @@
     "SpaSideMenu1Name": ["Salon"],
     "SpaSideMenu2Name": ["Sauna"],
     "SpaSideMenu3Name": ["Jacuzzi"],
-    "SpaSideMenu4Name": ["Employee"],
+    "SpaSideMenu4Name": ["Cafe"],
     "SpaSideMenu5Name": ["BGM"],
     "SpaSideMenu6Name": [""],
     "SpaSideMenu7Name": [""],
@@ -158,16 +158,16 @@
     "ShadeSideMenu11Visible": ["False"],
     "ShadeSideMenu12Visible": ["False"],
 
-    "Source1Name": ["BT"],
-    "Source2Name": ["AUX"],
-    "Source3Name": ["BGM 1"],
-    "Source4Name": ["BGM 2"],
+    "Source1Name": ["BGM"],
+    "Source2Name": ["BT"],
+    "Source3Name": ["AUX"],
+    "Source4Name": ["Off"],
     "Source5Name": ["BGM 3"],
     "Source6Name": ["BGM 4"]
   },
   "salon": {
-    "AudioCtrl1Name": ["Program"],
-    "AudioCtrl2Name": [""],
+    "AudioCtrl1Name": ["Salon"],
+    "AudioCtrl2Name": ["SPA"],
     "AudioCtrl3Name": [""],
     "AudioCtrl4Name": [""],
     "AudioCtrl5Name": [""],
@@ -180,7 +180,7 @@
     "AudioCtrl12Name": [""],
 
     "AudioCtrl1Visible": ["True"],
-    "AudioCtrl2Visible": ["False"],
+    "AudioCtrl2Visible": ["True"],
     "AudioCtrl3Visible": ["False"],
     "AudioCtrl4Visible": ["False"],
     "AudioCtrl5Visible": ["False"],
@@ -212,7 +212,7 @@
     "AudioCtrl3Name": ["Sauna 3"],
     "AudioCtrl4Name": ["Sauna 4"],
     "AudioCtrl5Name": ["Sauna 5"],
-    "AudioCtrl6Name": [""],
+    "AudioCtrl6Name": ["Sauna Office"],
     "AudioCtrl7Name": [""],
     "AudioCtrl8Name": [""],
     "AudioCtrl9Name": [""],
@@ -225,7 +225,7 @@
     "AudioCtrl3Visible": ["True"],
     "AudioCtrl4Visible": ["True"],
     "AudioCtrl5Visible": ["True"],
-    "AudioCtrl6Visible": ["False"],
+    "AudioCtrl6Visible": ["True"],
     "AudioCtrl7Visible": ["False"],
     "AudioCtrl8Visible": ["False"],
     "AudioCtrl9Visible": ["False"],
@@ -248,7 +248,7 @@
   },
 
   "jacuzzi": {
-    "AudioCtrl1Name": ["Program"],
+    "AudioCtrl1Name": ["Jacuzzi"],
     "AudioCtrl2Name": [""],
     "AudioCtrl3Name": [""],
     "AudioCtrl4Name": [""],
@@ -274,7 +274,7 @@
     "AudioCtrl11Visible": ["False"],
     "AudioCtrl12Visible": ["False"],
 
-    "AudioCtrl1SrcVisible": ["True"],
+    "AudioCtrl1SrcVisible": ["False"],
     "AudioCtrl2SrcVisible": ["False"],
     "AudioCtrl3SrcVisible": ["False"],
     "AudioCtrl4SrcVisible": ["False"],
@@ -289,7 +289,7 @@
   },
 
   "employee": {
-    "AudioCtrl1Name": ["Program"],
+    "AudioCtrl1Name": ["Cafe"],
     "AudioCtrl2Name": [""],
     "AudioCtrl3Name": [""],
     "AudioCtrl4Name": [""],
@@ -315,7 +315,7 @@
     "AudioCtrl11Visible": ["False"],
     "AudioCtrl12Visible": ["False"],
 
-    "AudioCtrl1SrcVisible": ["True"],
+    "AudioCtrl1SrcVisible": ["False"],
     "AudioCtrl2SrcVisible": ["False"],
     "AudioCtrl3SrcVisible": ["False"],
     "AudioCtrl4SrcVisible": ["False"],
