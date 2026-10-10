@@ -19,7 +19,7 @@
     "Mode2Visible": ["True"],
     "Mode3Visible": ["True"],
     "Mode4Visible": ["True"],
-    "Mode5Visible": ["True"],
+    "Mode5Visible": ["False"],
     "Mode6Visible": ["False"],
     "Mode7Visible": ["False"],
     "Mode8Visible": ["False"],
