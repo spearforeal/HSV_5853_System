@@ -53,20 +53,20 @@
     "SideMenu1Name": ["P.Dining"],
     "SideMenu2Name": ["Joan"],
     "SideMenu3Name": ["Odin"],
-    "SideMenu4Name": ["Bakery"],
+    "SideMenu4Name": ["Bar"],
     "SideMenu5Name": ["Service"],
     "SideMenu6Name": ["Restroom"],
     "SideMenu7Name": ["Cochere"],
     "SideMenu8Name": ["Terrace"],
     "SideMenu9Name": ["Lobby"],
-    "SideMenu10Name": ["Line"],
+    "SideMenu10Name": ["BGM"],
     "SideMenu11Name": ["Line"],
     "SideMenu12Name": ["Line"],
 
     "SideMenu1Visible": ["True"],
     "SideMenu2Visible": ["True"],
     "SideMenu3Visible": ["True"],
-    "SideMenu4Visible": ["False"],
+    "SideMenu4Visible": ["True"],
     "SideMenu5Visible": ["False"],
     "SideMenu6Visible": ["True"],
     "SideMenu7Visible": ["True"],
@@ -169,7 +169,7 @@
     "ShadePreset7Visible": ["True"],
     "ShadePreset8Visible": ["True"],
 
-    "AudioCtrl1Name": ["Dining"],
+    "AudioCtrl1Name": ["Speakers"],
     "AudioCtrl2Name": [""],
     "AudioCtrl3Name": [""],
     "AudioCtrl4Name": [""],
@@ -198,7 +198,7 @@
   },
 
   "r&b": {
-    "AudioCtrl1Name": ["Restaurant"],
+    "AudioCtrl1Name": ["Speakers"],
     "AudioCtrl2Name": [""],
     "AudioCtrl3Name": [""],
     "AudioCtrl4Name": [""],
@@ -226,7 +226,7 @@
     "AudioCtrl8SrcVisible": ["False"]
   },
   "adventure": {
-    "AudioCtrl1Name": ["Odin"],
+    "AudioCtrl1Name": ["Speakers"],
     "AudioCtrl2Name": [""],
     "AudioCtrl3Name": [""],
     "AudioCtrl4Name": [""],
@@ -254,7 +254,7 @@
     "AudioCtrl8SrcVisible": ["False"]
   },
   "bakery": {
-    "AudioCtrl1Name": ["Bakery"],
+    "AudioCtrl1Name": ["Speakers"],
     "AudioCtrl2Name": [""],
     "AudioCtrl3Name": [""],
     "AudioCtrl4Name": [""],
@@ -272,7 +272,7 @@
     "AudioCtrl7Visible": ["False"],
     "AudioCtrl8Visible": ["False"],
 
-    "AudioCtrl1SrcVisible": ["True"],
+    "AudioCtrl1SrcVisible": ["False"],
     "AudioCtrl2SrcVisible": ["False"],
     "AudioCtrl3SrcVisible": ["False"],
     "AudioCtrl4SrcVisible": ["False"],
@@ -282,7 +282,7 @@
     "AudioCtrl8SrcVisible": ["False"]
   },
   "service": {
-    "AudioCtrl1Name": ["Service"],
+    "AudioCtrl1Name": ["Speakers"],
     "AudioCtrl2Name": [""],
     "AudioCtrl3Name": [""],
     "AudioCtrl4Name": [""],
@@ -310,7 +310,7 @@
     "AudioCtrl8SrcVisible": ["False"]
   },
   "restroom": {
-    "AudioCtrl1Name": ["Restroom"],
+    "AudioCtrl1Name": ["Speakers"],
     "AudioCtrl2Name": [""],
     "AudioCtrl3Name": [""],
     "AudioCtrl4Name": [""],
@@ -339,7 +339,7 @@
   },
 
   "cochere": {
-    "AudioCtrl1Name": ["Cochere"],
+    "AudioCtrl1Name": ["Speakers"],
     "AudioCtrl2Name": [""],
     "AudioCtrl3Name": [""],
     "AudioCtrl4Name": [""],
@@ -367,7 +367,7 @@
     "AudioCtrl8SrcVisible": ["False"]
   },
   "terrace": {
-    "AudioCtrl1Name": ["Terrace"],
+    "AudioCtrl1Name": ["Speakers"],
     "AudioCtrl2Name": [""],
     "AudioCtrl3Name": [""],
     "AudioCtrl4Name": [""],
@@ -398,7 +398,7 @@
     "AudioCtrl1Name": ["506 Elevator"],
     "AudioCtrl2Name": ["507 Deck Spk"],
     "AudioCtrl3Name": ["505 Elavator"],
-    "AudioCtrl4Name": ["Lobby"],
+    "AudioCtrl4Name": ["Speakers"],
     "AudioCtrl5Name": [""],
     "AudioCtrl6Name": [""],
     "AudioCtrl7Name": [""],

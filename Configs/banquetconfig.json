@@ -373,7 +373,7 @@
     "MicControl12Visible": ["False"]
   },
   "fitness": {
-    "AudioCtrl1Name": ["Gym"],
+    "AudioCtrl1Name": ["Speakers"],
     "AudioCtrl2Name": [""],
     "AudioCtrl3Name": [""],
     "AudioCtrl4Name": [""],
@@ -402,7 +402,7 @@
   },
 
   "corridor": {
-    "AudioCtrl1Name": ["Corridor"],
+    "AudioCtrl1Name": ["Speakers"],
     "AudioCtrl2Name": [""],
     "AudioCtrl3Name": [""],
     "AudioCtrl4Name": [""],
@@ -420,7 +420,7 @@
     "AudioCtrl7Visible": ["False"],
     "AudioCtrl8Visible": ["False"],
 
-    "AudioCtrl1SrcVisible": ["True"],
+    "AudioCtrl1SrcVisible": ["False"],
     "AudioCtrl2SrcVisible": ["False"],
     "AudioCtrl3SrcVisible": ["False"],
     "AudioCtrl4SrcVisible": ["False"],
@@ -449,7 +449,7 @@
     "AudioCtrl7Visible": ["False"],
     "AudioCtrl8Visible": ["False"],
 
-    "AudioCtrl1SrcVisible": ["True"],
+    "AudioCtrl1SrcVisible": ["False"],
     "AudioCtrl2SrcVisible": ["False"],
     "AudioCtrl3SrcVisible": ["False"],
     "AudioCtrl4SrcVisible": ["False"],
@@ -478,7 +478,7 @@
     "AudioCtrl7Visible": ["False"],
     "AudioCtrl8Visible": ["False"],
 
-    "AudioCtrl1SrcVisible": ["True"],
+    "AudioCtrl1SrcVisible": ["False"],
     "AudioCtrl2SrcVisible": ["False"],
     "AudioCtrl3SrcVisible": ["False"],
     "AudioCtrl4SrcVisible": ["False"],
@@ -498,7 +498,7 @@
     "AudioCtrl7Name": [""],
     "AudioCtrl8Name": [""],
 
-    "AudioCtrl1Visible": ["True"],
+    "AudioCtrl1Visible": ["False"],
     "AudioCtrl2Visible": ["False"],
     "AudioCtrl3Visible": ["False"],
     "AudioCtrl4Visible": ["False"],
@@ -507,7 +507,7 @@
     "AudioCtrl7Visible": ["False"],
     "AudioCtrl8Visible": ["False"],
 
-    "AudioCtrl1SrcVisible": ["True"],
+    "AudioCtrl1SrcVisible": ["False"],
     "AudioCtrl2SrcVisible": ["False"],
     "AudioCtrl3SrcVisible": ["False"],
     "AudioCtrl4SrcVisible": ["False"],

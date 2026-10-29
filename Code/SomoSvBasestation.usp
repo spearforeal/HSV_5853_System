@@ -1,0 +1,302 @@
+/*
+  Somo SV Basestation (MQTT) - SIMPL+ wrapper around the SomoMqttSvBasestation SIMPL# library.
+  SV-site fork of the general somo-mqtt-multiroom per-basestation symbol (same engine,
+  Sv-renamed assemblies so the two modules never collide in one program).
+
+  ONE placed symbol == ONE basestation. This site (SV: Banquet Room + Private Dining,
+  one CP4N) places TWO symbols - one per basestation - in ONE program. Each placed
+  symbol gets its own QR, worker thread, and MQTT/TLS session. This is the
+  per-basestation twin of the pooled "Somo SV Rooms (MQTT)" symbol; both wrap the same
+  engine, so slot mapping and behavior are identical. There is no fixed room ceiling:
+  the number of basestations is simply how many symbols you place (bounded only by the
+  processor's socket/thread budget, which must be soak-tested).
+
+  Enter the basestation QR code (used only as the topic namespace, never a login)
+  plus the shared Somo controller MQTT username/password (the fleet-wide account -
+  same for every basestation; only the QR differs). The module connects to
+  mqtt.somo.ai over TLS, self-discovers the provisioned lights/scenes/shades from the
+  retained config, and keeps names/levels/feedback live across re-provisioning.
+
+  Slot mapping (compacted, stable across config pushes):
+    Light slot n   = the n-th light ordered by id (compacted, like scenes/shades)
+    Scene slot n   = the n-th scene ordered by id (compacted)
+    Shade slot n   = the n-th shade ordered by its RF address
+  An empty *_Name_Fb[slot] string means that slot is unprovisioned.
+
+  All pin arrays are FIXED size (each renders at its full ceiling). Wire only the slots a
+  room uses (e.g. lights 1..N), leave the rest, then Make Symbol Complete. (Pin count is a
+  compile-time cap - SIMPL+ cannot size pins from a parameter.) Four _Reserved_*[1] pads exist
+  only to absorb SIMPL+'s "last array of each kind is variable-size" rule, so every real array
+  renders full instead of collapsing to 1 pin.
+*/
+
+#SYMBOL_NAME "Somo SV Basestation (MQTT)"
+#CATEGORY "46" "Somo"
+#DEFAULT_VOLATILE
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+
+#USER_SIMPLSHARP_LIBRARY "SomoMqttSvBasestation"
+
+// Compile-time pin CEILINGS. SIMPL+ array bounds MUST be #DEFINE_CONSTANT literals; they
+// can never come from a runtime parameter (that is why a "number of lights" box that grows
+// the pins is impossible). Every array renders at its full ceiling; wire the slots a room
+// uses and leave the rest. MAX_LIGHTS = largest room + headroom (site max 19). MAX_SHADES is
+// the firmware live-state cap; do not raise it.
+#DEFINE_CONSTANT MAX_LIGHTS 24
+#DEFINE_CONSTANT MAX_SCENES 24
+#DEFINE_CONSTANT MAX_SHADES 8
+
+// Six _SKIP_ rows - ONE PER PARAMETER (6 params). In Detail View the parameter
+// cells render over the symbol's first pin rows, so without one skip per parameter
+// the last parameter (Verbose_Logging) and the first pins (Connect / Connected_Fb)
+// land on the same row and their labels disappear.
+DIGITAL_INPUT _SKIP_, _SKIP_, _SKIP_, _SKIP_, _SKIP_, _SKIP_, Connect, Disconnect, Request_Sync;
+// All arrays are FIXED (full) size. SIMPL+ forces the LAST array of each kind variable-size
+// (it would collapse to 1 pin), so each input kind ends with a _Reserved_*[1] pad that absorbs
+// that forced slot - the real Scene/Shade/Light arrays are never last-of-kind, so they render
+// full. Light_Level / Shade_Position (and their _Fb) are 0-100 (percent), NOT 0-65535.
+DIGITAL_INPUT Scene_Activate[MAX_SCENES];
+DIGITAL_INPUT Scene_Deactivate[MAX_SCENES];
+DIGITAL_INPUT Shade_Up[MAX_SHADES];
+DIGITAL_INPUT Shade_Down[MAX_SHADES];
+DIGITAL_INPUT Shade_Stop[MAX_SHADES];
+ANALOG_INPUT Shade_Position[MAX_SHADES];
+ANALOG_INPUT Light_Level[MAX_LIGHTS];
+DIGITAL_INPUT _Reserved_DIn[1];   // pad: last DIGITAL_INPUT (absorbs the forced variable slot)
+ANALOG_INPUT  _Reserved_AIn[1];   // pad: last ANALOG/STRING input
+
+// Every scalar output before any arrayed output (error 1307), so the scalar feedbacks (counts,
+// Status_Fb, Basestation_Id_Fb) sit here first. All feedback ARRAYS are fixed (full) size; a
+// _Reserved_*[1] pad ends each output kind to absorb SIMPL+'s forced last-of-kind variable slot
+// so the real arrays render full.
+DIGITAL_OUTPUT _SKIP_, _SKIP_, _SKIP_, _SKIP_, _SKIP_, _SKIP_, Connected_Fb, Basestation_Online_Fb, Occupied_Fb, Reserved_Fb, Ready_Fb, QR_Match_Fb;
+ANALOG_OUTPUT Light_Count_Fb, Scene_Count_Fb, Shade_Count_Fb;
+STRING_OUTPUT Status_Fb, Basestation_Id_Fb;
+ANALOG_OUTPUT Shade_Position_Fb[MAX_SHADES];
+DIGITAL_OUTPUT Scene_Active_Fb[MAX_SCENES];
+STRING_OUTPUT Scene_Name_Fb[MAX_SCENES];
+STRING_OUTPUT Shade_Name_Fb[MAX_SHADES];
+ANALOG_OUTPUT Light_Level_Fb[MAX_LIGHTS];
+STRING_OUTPUT Light_Name_Fb[MAX_LIGHTS];
+DIGITAL_OUTPUT _Reserved_DOut[1];   // pad: last DIGITAL_OUTPUT (absorbs the forced variable slot)
+ANALOG_OUTPUT  _Reserved_AOut[1];   // pad: last ANALOG/STRING output
+
+STRING_PARAMETER QR_Code[16];
+STRING_PARAMETER MQTT_Username[32];
+STRING_PARAMETER MQTT_Password[64];
+STRING_PARAMETER Broker_Override[64];
+INTEGER_PARAMETER Default_Ramp_Ms;
+INTEGER_PARAMETER Verbose_Logging;
+
+#BEGIN_PARAMETER_PROPERTIES QR_Code
+   propShortDescription = "Basestation QR code (topics only, not a login)";
+#END_PARAMETER_PROPERTIES
+
+#BEGIN_PARAMETER_PROPERTIES MQTT_Username
+   propDefaultValue = "crestron";
+   propShortDescription = "Shared Somo controller account username - defaults to crestron (same for every basestation)";
+#END_PARAMETER_PROPERTIES
+
+#BEGIN_PARAMETER_PROPERTIES MQTT_Password
+   propShortDescription = "Shared Somo controller account password (same for every basestation)";
+#END_PARAMETER_PROPERTIES
+
+#BEGIN_PARAMETER_PROPERTIES Broker_Override
+   propDefaultValue = "";
+   propShortDescription = "Leave empty for mqtt.somo.ai. host[:port] to override (local test only)";
+#END_PARAMETER_PROPERTIES
+
+#BEGIN_PARAMETER_PROPERTIES Default_Ramp_Ms
+   propValidUnits = unitDecimal;
+   propDefaultValue = 1000d;
+   propShortDescription = "Light ramp time in ms (full 0-100% sweep)";
+#END_PARAMETER_PROPERTIES
+
+#BEGIN_PARAMETER_PROPERTIES Verbose_Logging
+   propValidUnits = unitDecimal;
+   propDefaultValue = 0d;
+   propShortDescription = "1 = print decoded config/state/light-change frames to the console (bench only)";
+#END_PARAMETER_PROPERTIES
+
+SomoStation bs;
+
+// ---------- feedback callbacks from the C# library (percent domain) ----------
+
+CALLBACK FUNCTION OnConnected(INTEGER value)
+{
+    Connected_Fb = value;
+}
+
+CALLBACK FUNCTION OnOnline(INTEGER value)
+{
+    Basestation_Online_Fb = value;
+}
+
+CALLBACK FUNCTION OnOccupied(INTEGER value)
+{
+    Occupied_Fb = value;
+}
+
+CALLBACK FUNCTION OnReserved(INTEGER value)
+{
+    Reserved_Fb = value;
+}
+
+CALLBACK FUNCTION OnCounts(INTEGER lights, INTEGER scenes, INTEGER shades)
+{
+    Light_Count_Fb = lights;
+    Scene_Count_Fb = scenes;
+    Shade_Count_Fb = shades;
+}
+
+CALLBACK FUNCTION OnLightLevel(INTEGER slot, INTEGER percent)
+{
+    if (slot >= 1 && slot <= MAX_LIGHTS)
+        Light_Level_Fb[slot] = percent;
+}
+
+CALLBACK FUNCTION OnLightName(INTEGER slot, STRING name)
+{
+    if (slot >= 1 && slot <= MAX_LIGHTS)
+        Light_Name_Fb[slot] = name;
+}
+
+CALLBACK FUNCTION OnSceneActive(INTEGER slot, INTEGER value)
+{
+    if (slot >= 1 && slot <= MAX_SCENES)
+        Scene_Active_Fb[slot] = value;
+}
+
+CALLBACK FUNCTION OnSceneName(INTEGER slot, STRING name)
+{
+    if (slot >= 1 && slot <= MAX_SCENES)
+        Scene_Name_Fb[slot] = name;
+}
+
+CALLBACK FUNCTION OnShadePosition(INTEGER slot, INTEGER percent)
+{
+    if (slot >= 1 && slot <= MAX_SHADES)
+        Shade_Position_Fb[slot] = percent;
+}
+
+CALLBACK FUNCTION OnShadeName(INTEGER slot, STRING name)
+{
+    if (slot >= 1 && slot <= MAX_SHADES)
+        Shade_Name_Fb[slot] = name;
+}
+
+CALLBACK FUNCTION OnStatus(STRING text)
+{
+    Status_Fb = text;
+}
+
+// Commissioning feedbacks: self-reported QR (echoed from the basestation status),
+// QR_Match (high when it equals QR_Code), and Ready (connected AND online AND config).
+CALLBACK FUNCTION OnBasestationId(STRING text)
+{
+    Basestation_Id_Fb = text;
+}
+
+CALLBACK FUNCTION OnQrMatch(INTEGER value)
+{
+    QR_Match_Fb = value;
+}
+
+CALLBACK FUNCTION OnReady(INTEGER value)
+{
+    Ready_Fb = value;
+}
+
+// ---------- control inputs ----------
+
+PUSH Connect
+{
+    bs.Setup(QR_Code, MQTT_Username, MQTT_Password, Broker_Override);
+    bs.SetDefaultRampMs(Default_Ramp_Ms);
+    bs.SetVerbose(Verbose_Logging);
+    // Bench test: uncomment to auto-blink light slot 1 on/off every 10s.
+    // bs.StartLightBlink(1, 10);
+    bs.Start();
+}
+
+PUSH Disconnect
+{
+    bs.Stop();
+}
+
+PUSH Request_Sync
+{
+    bs.RequestSync();
+}
+
+CHANGE Light_Level
+{
+    INTEGER i;
+    i = GetLastModifiedArrayIndex();
+    bs.SetLightPercent(i, Light_Level[i]);
+}
+
+PUSH Scene_Activate
+{
+    INTEGER i;
+    i = GetLastModifiedArrayIndex();
+    bs.ActivateScene(i);
+}
+
+PUSH Scene_Deactivate
+{
+    INTEGER i;
+    i = GetLastModifiedArrayIndex();
+    bs.DeactivateScene(i);
+}
+
+PUSH Shade_Up
+{
+    INTEGER i;
+    i = GetLastModifiedArrayIndex();
+    bs.ShadeUp(i);
+}
+
+PUSH Shade_Down
+{
+    INTEGER i;
+    i = GetLastModifiedArrayIndex();
+    bs.ShadeDown(i);
+}
+
+PUSH Shade_Stop
+{
+    INTEGER i;
+    i = GetLastModifiedArrayIndex();
+    bs.ShadeStop(i);
+}
+
+CHANGE Shade_Position
+{
+    INTEGER i;
+    i = GetLastModifiedArrayIndex();
+    bs.ShadeSetPercent(i, Shade_Position[i]);
+}
+
+// ---------- startup ----------
+
+FUNCTION Main()
+{
+    WaitForInitializationComplete();
+    RegisterDelegate(bs, ConnectedFb, OnConnected);
+    RegisterDelegate(bs, OnlineFb, OnOnline);
+    RegisterDelegate(bs, OccupiedFb, OnOccupied);
+    RegisterDelegate(bs, ReservedFb, OnReserved);
+    RegisterDelegate(bs, CountsFb, OnCounts);
+    RegisterDelegate(bs, LightLevelFb, OnLightLevel);
+    RegisterDelegate(bs, LightNameFb, OnLightName);
+    RegisterDelegate(bs, SceneActiveFb, OnSceneActive);
+    RegisterDelegate(bs, SceneNameFb, OnSceneName);
+    RegisterDelegate(bs, ShadePositionFb, OnShadePosition);
+    RegisterDelegate(bs, ShadeNameFb, OnShadeName);
+    RegisterDelegate(bs, StatusFb, OnStatus);
+    RegisterDelegate(bs, BasestationIdFb, OnBasestationId);
+    RegisterDelegate(bs, QrMatchFb, OnQrMatch);
+    RegisterDelegate(bs, ReadyFb, OnReady);
+}
